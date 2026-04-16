@@ -11,15 +11,13 @@ export default function PartnerLogos() {
       <style>{`
         @keyframes marquee {
           0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.333%); }
         }
         .marquee-track {
           display: flex;
           width: max-content;
-          animation: marquee 35s linear infinite;
-        }
-        .marquee-track:hover {
-          animation-play-state: paused;
+          animation: marquee 30s linear infinite;
+          will-change: transform;
         }
       `}</style>
 
@@ -40,20 +38,9 @@ export default function PartnerLogos() {
         {/* Infinite logo slider */}
         <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[80px] md:h-[140px]">
           <div className="marquee-track h-full items-center">
-            {/* First set */}
-            {logoFiles.map((n) => (
-              <div key={`a-${n}`} className="flex items-center justify-center mx-6 md:mx-10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`/media/partner-logo/${n}.png`}
-                  alt={`partner-${n}`}
-                  className="h-[60px] md:h-[110px] w-auto block object-contain"
-                />
-              </div>
-            ))}
-            {/* Duplicate for seamless loop */}
-            {logoFiles.map((n) => (
-              <div key={`b-${n}`} className="flex items-center justify-center mx-6 md:mx-10">
+            {/* Three copies so -33.333% always lands cleanly */}
+            {[...logoFiles, ...logoFiles, ...logoFiles].map((n, i) => (
+              <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/media/partner-logo/${n}.png`}
