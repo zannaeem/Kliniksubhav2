@@ -214,7 +214,7 @@ export function FeatureCarousel() {
           </div>
         ))}
 
-        {/* Prev / Next tap zones */}
+        {/* Prev / Next tap zones — half of card each side, invisible */}
         <button
           onClick={() => goTo(index - 1)}
           aria-label="Previous"
@@ -226,48 +226,51 @@ export function FeatureCarousel() {
           className="absolute right-0 top-0 h-full w-1/2 z-10 cursor-pointer"
         />
 
-        {/* Arrow buttons */}
-        <div className="absolute bottom-6 right-6 z-20 flex gap-2">
-          <button
-            onClick={() => goTo(index - 1)}
-            aria-label="Previous"
-            className="w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-sm flex items-center justify-center transition-colors"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <path d="M19 12H5M12 5l-7 7 7 7" />
-            </svg>
-          </button>
-          <button
-            onClick={() => goTo(index + 1)}
-            aria-label="Next"
-            className="w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-sm flex items-center justify-center transition-colors"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
         {/* Progress counter top-right */}
         <div className="absolute top-5 right-5 z-20 px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-medium tabular-nums">
           {index + 1} / {FEATURES.length}
         </div>
       </div>
 
-      {/* Dot indicators */}
-      <div className="flex items-center justify-center gap-1.5 mt-4">
-        {FEATURES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`rounded-full transition-all duration-300 ${
-              i === index
-                ? "w-6 h-1.5 bg-[#46c8a1]"
-                : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
-            }`}
-          />
-        ))}
+      {/* Controls row: arrows + dots all in one centered line */}
+      <div className="flex items-center justify-center gap-3 mt-4">
+        {/* Prev arrow */}
+        <button
+          onClick={() => goTo(index - 1)}
+          aria-label="Previous"
+          className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors shrink-0"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-600">
+            <path d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+        </button>
+
+        {/* Dot indicators */}
+        <div className="flex items-center gap-1.5">
+          {FEATURES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`rounded-full transition-all duration-300 ${
+                i === index
+                  ? "w-6 h-1.5 bg-[#46c8a1]"
+                  : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Next arrow */}
+        <button
+          onClick={() => goTo(index + 1)}
+          aria-label="Next"
+          className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors shrink-0"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-600">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </div>
   );
