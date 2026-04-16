@@ -64,7 +64,7 @@ export default function BranchesSection() {
                 {/* Gradient overlay at bottom of image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                {/* Badges — top row */}
+                {/* Badges - top row */}
                 <div className="absolute top-4 left-4 flex items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-white/90 text-xs font-bold text-foreground backdrop-blur-sm">
                     {branch.badge}

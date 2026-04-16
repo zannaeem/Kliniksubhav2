@@ -6,7 +6,7 @@ import VideoHero from "@/components/ui/video-hero";
 export const metadata: Metadata = {
   title: "Facilities | Klinik Subha",
   description:
-    "Take a tour of Klinik Subha's modern facilities — consultation rooms, treatment rooms, X-Ray room, and more.",
+    "Take a tour of Klinik Subha's modern facilities - consultation rooms, treatment rooms, X-Ray room, and more.",
 };
 
 export default function FacilitiesPage() {

@@ -157,7 +157,17 @@ export function FeatureCarousel() {
   const [index, setIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const resetScheduled = useRef(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const cardsToShow = isMobile ? 1 : 2;
 
   const advance = useCallback(() => {
     setTransitioning(true);
@@ -196,9 +206,10 @@ export function FeatureCarousel() {
     }
   }, [index]);
 
-  // Desktop: 2 cards visible (each 50%), Mobile: 1 card (100%)
-  // translateX: move by `index` card widths
-  // translateX is % of the track's own width. Each card = 100/TRACK.length % of track.
+  // Calculate translate percentage
+  // Each item is 100/cardsToShow % of the container width.
+  // The track width is TRACK.length * (100/cardsToShow) %.
+  // So moving 1 item means moving (1 / TRACK.length) of the track width.
   const translatePct = index * (100 / TRACK.length);
 
   return (
@@ -207,12 +218,12 @@ export function FeatureCarousel() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Track container — clips overflow */}
+      {/* Track container - clips overflow */}
       <div className="overflow-hidden rounded-3xl">
         <div
           className="flex gap-4"
           style={{
-            width: `${TRACK.length * 50}%`,
+            width: `${TRACK.length * (100 / cardsToShow)}%`,
             transform: `translateX(-${translatePct}%)`,
             transition: transitioning ? "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
           }}

@@ -20,7 +20,7 @@ const displayDoctors = getDisplayOrder();
 export default function DoctorsTeaser() {
   return (
     <section className="py-24 md:py-32 bg-surface">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-8 sm:px-10 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-5 py-2 bg-[#46c8a1]/10 rounded-full text-xs font-bold uppercase tracking-[0.08em] text-[#46c8a1] mb-4">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FAQ | Klinik Subha",
-  description: "Frequently asked questions about Klinik Subha — appointments, services, operating hours, and more.",
+  description: "Frequently asked questions about Klinik Subha - appointments, services, operating hours, and more.",
 };
 
 const faqs = [
@@ -11,7 +11,7 @@ const faqs = [
     items: [
       {
         q: "Do I need to make an appointment?",
-        a: "No appointment is needed — we accept walk-ins at both branches every day. However, if you prefer to plan ahead or want to book with a specific doctor, you can contact us via WhatsApp.",
+        a: "No appointment is needed - we accept walk-ins at both branches every day. However, if you prefer to plan ahead or want to book with a specific doctor, you can contact us via WhatsApp.",
       },
       {
         q: "How do I book an appointment?",
@@ -23,7 +23,7 @@ const faqs = [
       },
       {
         q: "Is there a registration fee?",
-        a: "A standard consultation fee applies. Our fees are kept affordable — please contact us directly for the latest fee schedule.",
+        a: "A standard consultation fee applies. Our fees are kept affordable - please contact us directly for the latest fee schedule.",
       },
     ],
   },
@@ -40,7 +40,7 @@ const faqs = [
       },
       {
         q: "Do you provide vaccinations for adults?",
-        a: "Yes — we offer vaccinations for adults including Hepatitis B, Influenza, HPV (Gardasil), Pneumococcal, and others. Contact us to confirm availability.",
+        a: "Yes - we offer vaccinations for adults including Hepatitis B, Influenza, HPV (Gardasil), Pneumococcal, and others. Contact us to confirm availability.",
       },
       {
         q: "Is X-Ray available at both branches?",
@@ -53,7 +53,7 @@ const faqs = [
     items: [
       {
         q: "What are your opening hours?",
-        a: "We are open every day — Monday to Sunday, including public holidays — from 8:00 AM to 9:00 PM.",
+        a: "We are open every day - Monday to Sunday, including public holidays - from 8:00 AM to 9:00 PM.",
       },
       {
         q: "Are you open on public holidays?",
@@ -131,7 +131,7 @@ export default function FAQPage() {
 
         <div className="mt-16 bg-[#46c8a1] rounded-3xl p-8 text-center">
           <p className="text-white font-semibold text-lg mb-2">Still have questions?</p>
-          <p className="text-white/80 text-sm mb-6">Our team is happy to help — reach out anytime.</p>
+          <p className="text-white/80 text-sm mb-6">Our team is happy to help - reach out anytime.</p>
           <a
             href="https://wa.me/60162235212"
             target="_blank"

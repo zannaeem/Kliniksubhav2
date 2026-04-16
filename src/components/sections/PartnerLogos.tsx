@@ -42,23 +42,23 @@ export default function PartnerLogos() {
           <div className="marquee-track h-full items-center">
             {/* First set */}
             {logoFiles.map((n) => (
-              <div key={`a-${n}`} className="flex items-center justify-center mx-10">
+              <div key={`a-${n}`} className="flex items-center justify-center mx-6 md:mx-10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/media/partner-logo/${n}.png`}
                   alt={`partner-${n}`}
-                  style={{ height: '110px', width: 'auto', display: 'block' }}
+                  className="h-[60px] md:h-[110px] w-auto block object-contain"
                 />
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {logoFiles.map((n) => (
-              <div key={`b-${n}`} className="flex items-center justify-center mx-10">
+              <div key={`b-${n}`} className="flex items-center justify-center mx-6 md:mx-10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/media/partner-logo/${n}.png`}
                   alt={`partner-${n}`}
-                  style={{ height: '110px', width: 'auto', display: 'block' }}
+                  className="h-[60px] md:h-[110px] w-auto block object-contain"
                 />
               </div>
             ))}

@@ -40,12 +40,12 @@ export default function RecentMoments() {
             Growing with our community
           </h2>
           <p className="mt-3 text-muted text-base max-w-lg mx-auto">
-            Celebrating the official opening of Klinik Subha Membakut — bringing quality, accessible healthcare even closer to home.
+            Celebrating the official opening of Klinik Subha Membakut - bringing quality, accessible healthcare even closer to home.
           </p>
         </div>
 
         {/* Uniform 4-photo grid */}
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           {photos.map((photo) => (
             <div
               key={photo.src}

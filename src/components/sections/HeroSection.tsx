@@ -3,21 +3,17 @@ export default function HeroSection() {
     <section className="w-full relative z-0">
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
         <div className="relative w-full h-[97vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
-          {/* Video Background */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/video/klinik-subha.mp4" type="video/mp4" />
-          </video>
+          {/* Video Background (YouTube) */}
+          <iframe
+            src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
+            allow="autoplay; encrypted-media"
+            className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] md:w-[150vw] md:h-[150vh] min-w-full min-h-[100%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          />
 
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/40" />
 
-          {/* Content — centred */}
+          {/* Content - centred */}
           <div className="relative z-10 h-full w-full flex items-center justify-center px-6">
             <div className="flex flex-col items-center text-center gap-6 max-w-3xl">
               <span className="inline-block px-5 py-2 bg-[#46c8a1] rounded-full text-xs font-bold uppercase tracking-[0.08em] text-white">

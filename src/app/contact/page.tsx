@@ -20,7 +20,7 @@ export default function ContactPage() {
       <VideoHero
         label="Contact Us"
         title="Find Us"
-        subtitle="Two locations serving Beaufort and Membakut. We're open every day — walk in or reach out anytime."
+        subtitle="Two locations serving Beaufort and Membakut. We're open every day - walk in or reach out anytime."
       />
 
       {/* Quick contact strip */}
@@ -191,7 +191,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Follow us — social + WhatsApp */}
+      {/* Follow us - social + WhatsApp */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -203,7 +203,7 @@ export default function ContactPage() {
               </p>
               <div className="flex items-center gap-3">
 
-                {/* Facebook — full branded button */}
+                {/* Facebook - full branded button */}
                 <a
                   href="https://www.facebook.com/kliniksubhabeaufort"
                   target="_blank"
@@ -219,7 +219,7 @@ export default function ContactPage() {
                   </span>
                 </a>
 
-                {/* Instagram — full branded gradient button */}
+                {/* Instagram - full branded gradient button */}
                 <a
                   href="https://www.instagram.com/kliniksubha/"
                   target="_blank"

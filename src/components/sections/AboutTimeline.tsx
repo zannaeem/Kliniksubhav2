@@ -8,7 +8,7 @@ const milestones = [
   {
     year: "1990",
     title: "Our Origins",
-    body: "Klinik Subha Beaufort was founded by Dr. Subhagan Chandran in Beaufort — a small clinic with a straightforward purpose: to make reliable healthcare available to everyone in the community, regardless of background.",
+    body: "Klinik Subha Beaufort was founded by Dr. Subhagan Chandran in Beaufort - a small clinic with a straightforward purpose: to make reliable healthcare available to everyone in the community, regardless of background.",
     aside: "Beaufort, Sabah",
     image: "/images/about/old-clinic.png",
     imageAlt: "The original Klinik Subha clinic in Beaufort",
@@ -16,7 +16,7 @@ const milestones = [
   {
     year: "2018",
     title: "A New Chapter",
-    body: "Dr. Jason Jimmy Lee Pillay took over the practice under Jash Pillay Medresources Sdn Bhd. His approach was simple — honour what Dr. Subhagan built, and build further. Modern diagnostic tools were introduced, and the clinic's reputation for personal, unhurried care was kept intact.",
+    body: "Dr. Jason Jimmy Lee Pillay took over the practice under Jash Pillay Medresources Sdn Bhd. His approach was simple - honour what Dr. Subhagan built, and build further. Modern diagnostic tools were introduced, and the clinic's reputation for personal, unhurried care was kept intact.",
     aside: "Jash Pillay Medresources Sdn Bhd · est. 17 Aug 2018",
     image: "/images/about/dr-jason.jpg",
     imageAlt: "Dr. Jason Jimmy Lee Pillay",
@@ -24,7 +24,7 @@ const milestones = [
   {
     year: "2021",
     title: "Strategic Expansion",
-    body: "The clinic relocated to a dual-shoplot space at Beaufort Square — a purpose-designed facility equipped with ultrasound, X-ray, ECG, and a full blood count machine. For the first time, patients could complete a full diagnostic workup in a single visit, without travelling to the city.",
+    body: "The clinic relocated to a dual-shoplot space at Beaufort Square - a purpose-designed facility equipped with ultrasound, X-ray, ECG, and a full blood count machine. For the first time, patients could complete a full diagnostic workup in a single visit, without travelling to the city.",
     aside: "Beaufort Square, 89800 Beaufort",
     image: "/images/about/activity-2021.jpg",
     imageAlt: "Klinik Subha Beaufort Square facility",
@@ -32,7 +32,7 @@ const milestones = [
   {
     year: "Present",
     title: "Growing With You",
-    body: "Today, the Klinik Subha group spans three facilities: our flagship clinic in Beaufort, the Kinabalu Medic Spine and Rehabilitation Centre, and the soon-to-open Membakut branch. Each one reflects the same founding belief — that good healthcare starts with actually listening.",
+    body: "Today, the Klinik Subha group spans three facilities: our flagship clinic in Beaufort, the Kinabalu Medic Spine and Rehabilitation Centre, and the soon-to-open Membakut branch. Each one reflects the same founding belief - that good healthcare starts with actually listening.",
     aside: "Three locations · Beaufort, Membakut & Beyond",
     image: "/images/about/activity-present.jpg",
     imageAlt: "Recent moments at Klinik Subha",
@@ -200,7 +200,7 @@ export default function AboutTimeline() {
           </h2>
           <p className="text-lg text-gray-500 leading-relaxed mb-4">
             Klinik Subha started in 1990 as a single clinic in Beaufort. Not
-            with a grand vision statement, but with a simple commitment — that
+            with a grand vision statement, but with a simple commitment - that
             everyone around here deserves a doctor who actually listens.
           </p>
           <p className="text-lg text-gray-500 leading-relaxed">
@@ -210,7 +210,7 @@ export default function AboutTimeline() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical centre line — desktop only */}
+          {/* Vertical centre line - desktop only */}
           <div
             className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 -translate-x-1/2"
             aria-hidden="true"

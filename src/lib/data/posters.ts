@@ -86,7 +86,7 @@ export const servicePosters: ServicePoster[] = [
     image: "/images/services/service5.jpeg",
     category: "Health Screenings",
     description:
-      "Our most popular all-in-one screening package. Covers the key markers for metabolic, cardiovascular, and organ health — suitable for all adults.",
+      "Our most popular all-in-one screening package. Covers the key markers for metabolic, cardiovascular, and organ health - suitable for all adults.",
     details: [
       "Full blood count (FBC)",
       "Fasting blood glucose",
@@ -142,7 +142,7 @@ export const servicePosters: ServicePoster[] = [
     image: "/images/services/service8.jpeg",
     category: "Health Screenings",
     description:
-      "Medical check for GDL/PSV licence renewal. Quick process designed for working drivers — results and JPJ report issued on the same visit.",
+      "Medical check for GDL/PSV licence renewal. Quick process designed for working drivers - results and JPJ report issued on the same visit.",
     details: [
       "Physical and cardiovascular examination",
       "Vision and colour-blindness test",
@@ -175,7 +175,7 @@ export const servicePosters: ServicePoster[] = [
     image: "/images/services/service10.jpeg",
     category: "Health Screenings",
     description:
-      "Full pre-employment medical for roles requiring a thorough health clearance — including X-Ray, ECG, drug test, and a complete blood panel.",
+      "Full pre-employment medical for roles requiring a thorough health clearance - including X-Ray, ECG, drug test, and a complete blood panel.",
     details: [
       "Full blood count & blood glucose",
       "Liver and kidney function tests",
@@ -261,7 +261,7 @@ export const servicePosters: ServicePoster[] = [
     description:
       "Synflorix (PCV10) pneumococcal vaccine for infants and young children. Protects against the bacteria that cause pneumonia, meningitis, and serious ear infections.",
     details: [
-      "Synflorix (PCV10) — 10-valent conjugate vaccine",
+      "Synflorix (PCV10) - 10-valent conjugate vaccine",
       "Protects against Streptococcus pneumoniae",
       "Guards against pneumonia, meningitis & otitis media",
       "4-dose schedule (2, 4, 6 months + booster)",
@@ -293,12 +293,12 @@ export const servicePosters: ServicePoster[] = [
     image: "/images/services/service17.jpeg",
     category: "Family Planning",
     description:
-      "Implanon is a long-acting reversible contraceptive (LARC) — a small flexible rod implanted under the skin of the upper arm. Over 99% effective and lasts up to 3 years.",
+      "Implanon is a long-acting reversible contraceptive (LARC) - a small flexible rod implanted under the skin of the upper arm. Over 99% effective and lasts up to 3 years.",
     details: [
       "Small rod implanted under upper arm skin",
       "Over 99% contraceptive effectiveness",
       "Lasts up to 3 years",
-      "Reversible — can be removed at any time",
+      "Reversible - can be removed at any time",
       "Procedure takes under 5 minutes",
       "No daily pill required",
       "Follow-up consultation included",

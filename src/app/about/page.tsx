@@ -6,7 +6,7 @@ import AboutTimeline from "@/components/sections/AboutTimeline";
 export const metadata: Metadata = {
   title: "About Us | Klinik Subha",
   description:
-    "Learn about Klinik Subha — Beaufort's trusted family clinic since 1990. Our story, vision, mission, and values.",
+    "Learn about Klinik Subha - Beaufort's trusted family clinic since 1990. Our story, vision, mission, and values.",
 };
 
 const businesses = [
@@ -15,7 +15,7 @@ const businesses = [
     status: "Active",
     badge: "Main Branch",
     description:
-      "Our flagship clinic at Beaufort Square, open every day from 8 AM to 9 PM — fully equipped with diagnostic, screening, and vaccination services.",
+      "Our flagship clinic at Beaufort Square, open every day from 8 AM to 9 PM - fully equipped with diagnostic, screening, and vaccination services.",
     image: "/images/branches/beaufort.jpg",
   },
   {
@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* Scroll-animated timeline */}
       <AboutTimeline />
 
-      {/* Vision & Mission — clean two-column */}
+      {/* Vision & Mission - clean two-column */}
       <section className="py-24 md:py-32 bg-[#f9fafb]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-100 rounded-2xl overflow-hidden border border-gray-100">

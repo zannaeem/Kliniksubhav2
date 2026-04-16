@@ -51,7 +51,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-3">4. Intellectual Property</h2>
             <p>
-              All content on this website — including text, images, logos, and design — is the
+              All content on this website - including text, images, logos, and design - is the
               property of Jash Pillay Medresources Sdn Bhd unless stated otherwise. You may not
               reproduce or use any content without prior written consent.
             </p>
@@ -87,8 +87,8 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">8. Contact</h2>
             <p>For any enquiries regarding these terms, please contact us:</p>
             <div className="mt-3 space-y-1">
-              <p><strong>Klinik Subha Beaufort</strong> — 016-2235212</p>
-              <p><strong>Klinik Subha Membakut</strong> — 087-887 788</p>
+              <p><strong>Klinik Subha Beaufort</strong> - 016-2235212</p>
+              <p><strong>Klinik Subha Membakut</strong> - 087-887 788</p>
             </div>
           </section>
 

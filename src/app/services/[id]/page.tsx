@@ -48,7 +48,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2">
 
-            {/* Poster — full, uncropped */}
+            {/* Poster - full, uncropped */}
             <div className="relative w-full aspect-[3/4] bg-gray-50">
               <Image
                 src={poster.image}
@@ -108,7 +108,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Sticky mobile CTA — visible on small screens only */}
+      {/* Sticky mobile CTA - visible on small screens only */}
       <div
         className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-t border-gray-100 px-4 py-3"
         style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}

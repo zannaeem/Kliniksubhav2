@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
             <p>We may collect the following personal information:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
               <li>Name, date of birth, and identification number (for patient registration)</li>
-              <li>Contact details — phone number and address</li>
+              <li>Contact details - phone number and address</li>
               <li>Medical history and clinical notes (for treatment purposes only)</li>
               <li>Messages sent to us via WhatsApp or other communication channels</li>
             </ul>
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
             <p>
               This website uses Google Maps embeds to display our clinic locations. By viewing these
               maps, you may be subject to Google&apos;s Privacy Policy. We also link to WhatsApp for
-              appointment bookings — messages sent via WhatsApp are subject to Meta&apos;s privacy terms.
+              appointment bookings - messages sent via WhatsApp are subject to Meta&apos;s privacy terms.
             </p>
           </section>
 
@@ -98,8 +98,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">8. Contact Us</h2>
             <p>If you have any questions about this privacy policy, please contact us:</p>
             <div className="mt-3 space-y-1">
-              <p><strong>Klinik Subha Beaufort</strong> — 016-2235212</p>
-              <p><strong>Klinik Subha Membakut</strong> — 087-887 788</p>
+              <p><strong>Klinik Subha Beaufort</strong> - 016-2235212</p>
+              <p><strong>Klinik Subha Membakut</strong> - 087-887 788</p>
             </div>
           </section>
 

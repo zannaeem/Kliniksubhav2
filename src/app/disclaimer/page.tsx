@@ -23,7 +23,7 @@ export default function DisclaimerPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">Not a Substitute for Professional Medical Advice</h2>
             <p>
               The information provided on this website is for general informational purposes only.
-              It is not intended to be — and should not be used as — a substitute for professional
+              It is not intended to be - and should not be used as - a substitute for professional
               medical advice, diagnosis, or treatment. Always seek the advice of your doctor or a
               qualified healthcare provider with any questions you may have regarding a medical
               condition.
@@ -70,8 +70,8 @@ export default function DisclaimerPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">Contact Us</h2>
             <p>If you have questions about this disclaimer, please contact us at either branch:</p>
             <div className="mt-3 space-y-1">
-              <p><strong>Klinik Subha Beaufort</strong> — 016-2235212</p>
-              <p><strong>Klinik Subha Membakut</strong> — 087-887 788</p>
+              <p><strong>Klinik Subha Beaufort</strong> - 016-2235212</p>
+              <p><strong>Klinik Subha Membakut</strong> - 087-887 788</p>
             </div>
           </section>
 

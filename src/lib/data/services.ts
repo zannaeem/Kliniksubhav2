@@ -9,8 +9,8 @@ export const serviceCategories: ServiceCategory[] = [
     title: "General / Outpatient",
     titleBm: "Rawatan Am / Pesakit Luar",
     services: [
-      { name: "Treatment of Minor Illnesses — Cough, Cold, Fever, Diarrhea, Dyspepsia", nameBm: "Rawatan Penyakit Ringan" },
-      { name: "Treatment of Chronic Diseases — Hypertension, Diabetes, Gout, Hyperlipidemia", nameBm: "Rawatan Penyakit Kronik" },
+      { name: "Treatment of Minor Illnesses - Cough, Cold, Fever, Diarrhea, Dyspepsia", nameBm: "Rawatan Penyakit Ringan" },
+      { name: "Treatment of Chronic Diseases - Hypertension, Diabetes, Gout, Hyperlipidemia", nameBm: "Rawatan Penyakit Kronik" },
       { name: "Treatment of Children and Infants", nameBm: "Rawatan Kanak-kanak dan Bayi" },
       { name: "Antenatal and Postnatal Care", nameBm: "Rawatan Antenatal dan Postnatal" },
       { name: "Family Planning Management", nameBm: "Pengurusan Perancangan Keluarga" },

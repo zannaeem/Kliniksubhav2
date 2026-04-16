@@ -9,16 +9,12 @@ interface VideoHeroProps {
 export default function VideoHero({ label, title, subtitle }: VideoHeroProps) {
   return (
     <section className="relative text-white pt-24 pb-14 md:pt-32 md:pb-20 overflow-hidden min-h-[280px] md:min-h-[340px]">
-      {/* Video background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/video/klinik-subha.mp4" type="video/mp4" />
-      </video>
+      {/* Video background (YouTube) */}
+      <iframe
+        src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
+        allow="autoplay; encrypted-media"
+        className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] md:w-[150vw] md:h-[150vh] min-w-full min-h-[100%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      />
 
       {/* Dark overlay so text stays readable */}
       <div className="absolute inset-0 bg-black/55" />

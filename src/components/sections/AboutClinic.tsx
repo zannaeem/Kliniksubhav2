@@ -11,14 +11,14 @@ export default function AboutClinic() {
             <span className="inline-block px-5 py-2 bg-[#46c8a1]/10 rounded-full text-xs font-bold uppercase tracking-[0.08em] text-[#46c8a1] mb-6">
               Our Story
             </span>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
               Rooted in Sabah,
               <span className="block text-[#46c8a1]">Trusted Since 1990.</span>
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Founded by Dr. Subhagan Chandran, Klinik Subha started as a single GP clinic in Beaufort in 1990. Over 35 years later, we have grown to serve more communities across Sabah, with branches in <strong>Beaufort</strong> and <strong>Membakut</strong> — bringing the same standard of care closer to where people live.
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
+              Founded by Dr. Subhagan Chandran, Klinik Subha started as a single GP clinic in Beaufort in 1990. Over 35 years later, we have grown to serve more communities across Sabah, with branches in <strong>Beaufort</strong> and <strong>Membakut</strong> - bringing the same standard of care closer to where people live.
             </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
               Each clinic is open daily from <strong>8:00 AM to 9:00 PM</strong> including public holidays, so you always have somewhere to go when it matters most.
             </p>
 
@@ -54,13 +54,12 @@ export default function AboutClinic() {
           {/* Right: Corporate video */}
           <div className="flex-1 w-full">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gray-900">
-              <video
-                controls
-                playsInline
+              <iframe
+                src="https://www.youtube.com/embed/arcxcJ1C7yA?rel=0&modestbranding=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
                 className="w-full h-full object-cover"
-              >
-                <source src="/video/klinik-subha-corporate.mp4" type="video/mp4" />
-              </video>
+              />
             </div>
           </div>
 

@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Klinik Subha — Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
+    default: "Klinik Subha - Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
     template: "%s | Klinik Subha",
   },
   description:
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "klinik berhampiran saya",
   ],
   openGraph: {
-    title: "Klinik Subha — Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
+    title: "Klinik Subha - Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
     description:
       "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Open daily 8AM–9PM including public holidays. Walk-ins welcome.",
     type: "website",
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Klinik Subha — Beaufort & Membakut, Sabah",
+        alt: "Klinik Subha - Beaufort & Membakut, Sabah",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klinik Subha — Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
+    title: "Klinik Subha - Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
     description:
       "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Open daily 8AM–9PM.",
     images: ["/og-image.jpg"],

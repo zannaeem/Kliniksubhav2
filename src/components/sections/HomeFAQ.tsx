@@ -6,7 +6,7 @@ import Link from "next/link";
 const faqs = [
   {
     q: "Do I need to make an appointment?",
-    a: "No appointment needed — we welcome walk-ins every day at both branches. If you'd like to book with a specific doctor, WhatsApp us at 016-2235212.",
+    a: "No appointment needed - we welcome walk-ins every day at both branches. If you'd like to book with a specific doctor, WhatsApp us at 016-2235212.",
   },
   {
     q: "Are you open on public holidays?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Do you offer health screening packages?",
-    a: "Yes — we offer screenings for diabetes, cholesterol, blood pressure, kidney and liver function, and more. WhatsApp us for the latest packages.",
+    a: "Yes - we offer screenings for diabetes, cholesterol, blood pressure, kidney and liver function, and more. WhatsApp us for the latest packages.",
   },
   {
     q: "Do I need to bring anything for my first visit?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Which branch should I go to?",
-    a: "We have two branches — Beaufort Square and Membakut. Both offer the same standard of care. Visit our Contact page to find the one nearest to you.",
+    a: "We have two branches - Beaufort Square and Membakut. Both offer the same standard of care. Visit our Contact page to find the one nearest to you.",
   },
 ];
 

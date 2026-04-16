@@ -7,7 +7,7 @@ import { postersByCategory } from "@/lib/data/posters";
 export const metadata: Metadata = {
   title: "Services | Klinik Subha",
   description:
-    "Comprehensive healthcare services at Klinik Subha — general outpatient, diagnostics, vaccinations, and more.",
+    "Comprehensive healthcare services at Klinik Subha - general outpatient, diagnostics, vaccinations, and more.",
 };
 
 const CATEGORY_META: Record<string, { titleBm: string }> = {
@@ -22,7 +22,7 @@ export default function ServicesPage() {
       <VideoHero
         label="Our Services"
         title="What We Offer"
-        subtitle="Complete healthcare services for your family — from routine checkups to advanced diagnostics, all under one roof."
+        subtitle="Complete healthcare services for your family - from routine checkups to advanced diagnostics, all under one roof."
       />
 
       {/* Poster grid by category */}
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                     href={`/services/${poster.id}`}
                     className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md hover:border-[#46c8a1]/40 transition-all"
                   >
-                    {/* Full poster — aspect ratio matches the 1080x905 source images */}
+                    {/* Full poster - aspect ratio matches the 1080x905 source images */}
                     <div className="relative w-full aspect-[6/5] bg-gray-50 border-b border-gray-100">
                       <Image
                         src={poster.image}

@@ -32,7 +32,7 @@ const features = [
     icon: Heart,
     title: "Comprehensive Care",
     description:
-      "From general outpatient to chronic disease management, maternity, and vaccinations — all under one roof.",
+      "From general outpatient to chronic disease management, maternity, and vaccinations - all under one roof.",
     accent: false,
     index: 2,
   },
@@ -48,7 +48,7 @@ const features = [
     icon: Users,
     title: "Patient-First Approach",
     description:
-      "We treat every patient as family — listening, understanding, and guiding you through your health journey.",
+      "We treat every patient as family - listening, understanding, and guiding you through your health journey.",
     accent: true,
     index: 4,
   },
@@ -217,17 +217,17 @@ export default function WhyChooseUs() {
           {/* Bento feature grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
 
-            {/* Row 1 — two half-width */}
+            {/* Row 1 - two half-width */}
             {regular.slice(0, 2).map((feature) => (
               <FeatureCard key={feature.title} feature={feature} className="md:col-span-3" />
             ))}
 
-            {/* Row 2 — three equal-width */}
+            {/* Row 2 - three equal-width */}
             {regular.slice(2, 5).map((feature) => (
               <FeatureCard key={feature.title} feature={feature} className="md:col-span-2" />
             ))}
 
-            {/* Row 3 — full-width */}
+            {/* Row 3 - full-width */}
             <FeatureCard feature={wide} className="md:col-span-6" />
 
           </div>
