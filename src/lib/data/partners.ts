@@ -1,0 +1,17 @@
+export const partners = [
+  "AIA Insurance",
+  "Dytan Health Online",
+  "E-MAS",
+  "Health Connect",
+  "Hong Leong Assurance",
+  "MedKad",
+  "PMCare",
+  "Majlis Daerah Beaufort",
+  "Sehati-PERKESO",
+  "RISDA",
+  "Sabah Electricity Sdn Bhd",
+  "Sabah Parks",
+  "WH Medicare",
+  "Loji Air Gadong Beaufort",
+  "Yayasan Sabah",
+];

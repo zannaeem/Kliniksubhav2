@@ -1,0 +1,32 @@
+export const doctors = [
+  {
+    id: "dr-jason",
+    name: "Dr. Jason Jimmy Lee Pillay",
+    shortName: "Dr. Jason",
+    gender: "he" as const,
+    role: "Owner & Medical Practitioner",
+    bio: "Took over the clinic in 2018, upholding the legacy of compassionate community care while integrating advanced medical technologies to serve Beaufort and surrounding districts.",
+    image: "/images/doctors/jason.png",
+    whatsappNumber: "60162235212",
+  },
+  {
+    id: "dr-sharlinna",
+    name: "Dr. Sharlinna John",
+    shortName: "Dr. Sharlinna",
+    gender: "she" as const,
+    role: "Medical Practitioner",
+    bio: "Known for her compassionate bedside manner and personalised approach, Dr. Sharlinna actively promotes preventive care and early health screening within the Beaufort community.",
+    image: "/images/doctors/sharlinna.png",
+    whatsappNumber: "60162235212",
+  },
+  {
+    id: "dr-siti",
+    name: "Dr. Siti Nurul Hidayu Hanuar",
+    shortName: "Dr. Siti Nurul",
+    gender: "she" as const,
+    role: "Medical Practitioner",
+    bio: "Committed to holistic patient care, Dr. Siti Nurul fosters meaningful doctor-patient relationships with a focus on health education and long-term wellness.",
+    image: "/images/doctors/nurul.png",
+    whatsappNumber: "60162235212",
+  },
+];

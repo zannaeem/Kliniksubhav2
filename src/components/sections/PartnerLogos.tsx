@@ -1,0 +1,91 @@
+"use client"
+
+import { Sparkles } from "@/components/ui/sparkles"
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
+
+const logoFiles = [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+export default function PartnerLogos() {
+  return (
+    <section className="relative bg-white overflow-hidden">
+      <style>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee 35s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      {/* Content layer */}
+      <div className="relative z-10 pt-24 pb-0">
+        <div className="mx-auto w-full max-w-4xl px-4 text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#46c8a1] mb-3">
+            Our Partners
+          </p>
+          <h2 className="text-3xl font-bold text-gray-900">
+            Trusted panel partners
+          </h2>
+          <p className="text-muted text-lg font-normal mt-2">
+            We work with leading insurance and corporate partners.
+          </p>
+        </div>
+
+        {/* Infinite logo slider */}
+        <div className="relative mt-12 w-full overflow-hidden" style={{ height: '140px' }}>
+          <div className="marquee-track h-full items-center">
+            {/* First set */}
+            {logoFiles.map((n) => (
+              <div key={`a-${n}`} className="flex items-center justify-center mx-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/media/partner-logo/${n}.png`}
+                  alt={`partner-${n}`}
+                  style={{ height: '110px', width: 'auto', display: 'block' }}
+                />
+              </div>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {logoFiles.map((n) => (
+              <div key={`b-${n}`} className="flex items-center justify-center mx-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/media/partner-logo/${n}.png`}
+                  alt={`partner-${n}`}
+                  style={{ height: '110px', width: 'auto', display: 'block' }}
+                />
+              </div>
+            ))}
+          </div>
+          <ProgressiveBlur
+            className='pointer-events-none absolute top-0 left-0 h-full w-[200px]'
+            direction='left'
+            blurIntensity={1}
+          />
+          <ProgressiveBlur
+            className='pointer-events-none absolute top-0 right-0 h-full w-[200px]'
+            direction='right'
+            blurIntensity={1}
+          />
+        </div>
+      </div>
+
+      {/* Half-rounded gradient + sparkles background */}
+      <div className="relative h-72 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)]">
+        <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#46c8a1,transparent_70%)] before:opacity-40" />
+        <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t border-[#46c8a1]/20 bg-white" />
+        <Sparkles
+          density={1000}
+          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+          color="#46c8a1"
+        />
+      </div>
+    </section>
+  )
+}
