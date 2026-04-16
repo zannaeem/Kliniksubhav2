@@ -25,7 +25,7 @@ export default function HeroSection() {
                 Komitmen Kami
               </h1>
               <p className="text-lg md:text-xl text-white/75 max-w-lg font-medium">
-                Experience 24/7 Premium Healthcare at Klinik Subha
+                Open Daily 8AM – 9PM, Including Public Holidays
               </p>
               <a
                 href="https://wa.me/60162235212"
