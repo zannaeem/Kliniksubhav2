@@ -3,7 +3,7 @@
 export default function AboutClinic() {
   return (
     <section className="bg-white py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 
           {/* Left: Text content */}
@@ -15,10 +15,10 @@ export default function AboutClinic() {
               Rooted in Sabah,
               <span className="block text-[#46c8a1]">Trusted Since 1990.</span>
             </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
+            <p className="text-gray-700 text-[17px] md:text-[18px] leading-[1.8] mb-5">
               Founded by Dr. Subhagan Chandran, Klinik Subha started as a single GP clinic in Beaufort in 1990. Over 35 years later, we have grown to serve more communities across Sabah, with branches in <strong>Beaufort</strong> and <strong>Membakut</strong> - bringing the same standard of care closer to where people live.
             </p>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+            <p className="text-gray-700 text-[17px] md:text-[18px] leading-[1.8] mb-8">
               Each clinic is open daily from <strong>8:00 AM to 9:00 PM</strong> including public holidays, so you always have somewhere to go when it matters most.
             </p>
 
@@ -30,12 +30,14 @@ export default function AboutClinic() {
                 "Digital X-Ray, Ultrasound, ECG and full lab on-site",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-gray-700 font-medium">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#46c8a1] flex items-center justify-center">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#46c8a1] flex items-center justify-center mt-1">
                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
                       <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  {item}
+                  <span className="text-[17px] md:text-[18px] leading-[1.6]">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>

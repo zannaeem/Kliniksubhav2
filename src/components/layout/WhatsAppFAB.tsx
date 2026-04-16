@@ -7,8 +7,7 @@ export default function WhatsAppFAB() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className="fixed right-5 z-50 flex items-center justify-center bg-[#25D366] hover:bg-[#20bd5a] text-white w-[60px] h-[60px] rounded-full shadow-lg hover:shadow-xl transition-all group hover:-translate-y-1"
-      style={{ bottom: "max(1.25rem, calc(1rem + env(safe-area-inset-bottom)))" }}
+      className="fixed right-5 z-50 flex items-center justify-center bg-[#25D366] hover:bg-[#20bd5a] text-white w-[60px] h-[60px] rounded-full shadow-lg hover:shadow-xl transition-all group hover:-translate-y-1 bottom-[calc(1rem+68px+env(safe-area-inset-bottom))] md:bottom-[max(1.25rem,calc(1rem+env(safe-area-inset-bottom)))]"
     >
       {/* Pulse ring */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-pulse-ring opacity-40 pointer-events-none" />

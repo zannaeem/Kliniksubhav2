@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFAB from "@/components/layout/WhatsAppFAB";
+import MobileTabBar from "@/components/layout/MobileTabBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,6 +67,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppFAB />
+        <MobileTabBar />
       </body>
     </html>
   );
