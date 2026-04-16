@@ -110,9 +110,6 @@ temp/
 
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
-public/video/*.mp4
-*.mp4
 
-*.mp4
-**/*.mp4
+
 
