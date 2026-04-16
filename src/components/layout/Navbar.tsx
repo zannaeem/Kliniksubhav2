@@ -34,27 +34,12 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 40 40"
-            fill="none"
-            className="text-white"
-          >
-            <path
-              d="M20 34C20 34 5 25 5 15C5 10.6 8.6 7 13 7C16.1 7 18.8 8.8 20 11.4C21.2 8.8 23.9 7 27 7C31.4 7 35 10.6 35 15C35 25 20 34 20 34Z"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-            />
-            <path
-              d="M8 20H14L16 16L18 24L20 14L22 22L24 18L26 20H32"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="Klinik Subha Logo"
+            className="w-8 h-8 rounded-full object-cover ring-2 ring-white/30"
+          />
           <span className="font-semibold text-white text-base tracking-tight">
             Klinik Subha
           </span>
