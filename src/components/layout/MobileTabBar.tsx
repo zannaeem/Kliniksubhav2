@@ -30,7 +30,7 @@ export default function MobileTabBar() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/60162235212"
+            href="https://wa.me/60162235212?text=Hi%20Klinik%20Subha!"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-[#25D366] transition-colors"
