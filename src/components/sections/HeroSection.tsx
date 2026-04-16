@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section className="w-full relative z-0">
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
-        <div className="relative w-full h-[85svh] md:h-[95vh] min-h-[500px] md:min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
+        <div className="relative w-full h-[93svh] md:h-[95vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
           {/* Video Background (YouTube) */}
           <iframe
             src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
