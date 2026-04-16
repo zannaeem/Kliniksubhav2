@@ -13,7 +13,7 @@ export default function VideoHero({ label, title, subtitle }: VideoHeroProps) {
       <iframe
         src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
         allow="autoplay; encrypted-media"
-        className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] md:w-[150vw] md:h-[150vh] min-w-full min-h-[100%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
       />
 
       {/* Dark overlay so text stays readable */}

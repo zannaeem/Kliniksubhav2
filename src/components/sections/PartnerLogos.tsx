@@ -38,7 +38,7 @@ export default function PartnerLogos() {
         </div>
 
         {/* Infinite logo slider */}
-        <div className="relative mt-12 w-full overflow-hidden" style={{ height: '140px' }}>
+        <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[80px] md:h-[140px]">
           <div className="marquee-track h-full items-center">
             {/* First set */}
             {logoFiles.map((n) => (
@@ -64,12 +64,12 @@ export default function PartnerLogos() {
             ))}
           </div>
           <ProgressiveBlur
-            className='pointer-events-none absolute top-0 left-0 h-full w-[200px]'
+            className='pointer-events-none absolute top-0 left-0 h-full w-[40px] sm:w-[100px] md:w-[200px]'
             direction='left'
             blurIntensity={1}
           />
           <ProgressiveBlur
-            className='pointer-events-none absolute top-0 right-0 h-full w-[200px]'
+            className='pointer-events-none absolute top-0 right-0 h-full w-[40px] sm:w-[100px] md:w-[200px]'
             direction='right'
             blurIntensity={1}
           />
@@ -77,12 +77,12 @@ export default function PartnerLogos() {
       </div>
 
       {/* Half-rounded gradient + sparkles background */}
-      <div className="relative h-72 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)]">
-        <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#46c8a1,transparent_70%)] before:opacity-40" />
-        <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t border-[#46c8a1]/20 bg-white" />
+      <div className="relative h-[380px] md:h-72 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] -mt-4 md:mt-0">
+        <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#46c8a1,transparent_80%)] md:before:bg-[radial-gradient(circle_at_bottom_center,#46c8a1,transparent_70%)] before:opacity-60 md:before:opacity-40" />
+        <div className="absolute -left-1/2 top-[40%] md:top-1/2 aspect-[1/0.7] md:aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t border-[#46c8a1]/20 bg-white" />
         <Sparkles
-          density={1000}
-          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+          density={800}
+          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(60%_60%,white,transparent_90%)] md:[mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
           color="#46c8a1"
         />
       </div>

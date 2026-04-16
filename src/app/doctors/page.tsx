@@ -21,7 +21,8 @@ export default function DoctorsPage() {
           {doctors.map((doctor, idx) => (
             <div
               key={doctor.id}
-              className={`flex flex-col ${
+              id={doctor.id}
+              className={`flex flex-col scroll-mt-24 ${
                 idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-10 items-center`}
             >

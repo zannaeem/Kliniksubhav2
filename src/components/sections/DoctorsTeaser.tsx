@@ -53,11 +53,12 @@ export default function DoctorsTeaser() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {displayDoctors.map((doctor) => {
             return (
-              <div
+              <Link
                 key={doctor.id}
+                href={`/doctors#${doctor.id}`}
                 className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border transition-all duration-300 border-[#46c8a1]/40 shadow-xl shadow-[#46c8a1]/10 hover:-translate-y-2 ring-1 ring-[#46c8a1]/20"
               >
-                <div className="relative shrink-0 overflow-hidden bg-gray-100 h-64 md:h-80">
+                <div className="relative shrink-0 overflow-hidden bg-gray-100 h-[360px] md:h-[520px]">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
@@ -75,7 +76,7 @@ export default function DoctorsTeaser() {
                   />
                   <p className="text-sm text-muted mt-6 mb-4">{doctor.role}</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

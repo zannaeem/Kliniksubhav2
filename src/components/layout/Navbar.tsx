@@ -24,12 +24,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center md:px-4 md:pt-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 md:px-4 md:pt-4">
       <div
-        className={`w-full max-w-5xl flex items-center justify-between transition-all duration-500 ${
+        className={`w-full max-w-5xl flex items-center justify-between rounded-full transition-all duration-500 ${
           scrolled
-            ? "bg-gray-900/95 backdrop-blur-md shadow-md md:rounded-full px-5 py-3 md:px-6"
-            : "bg-transparent md:bg-gray-900/80 md:backdrop-blur-sm md:rounded-full px-5 py-4 md:px-6 md:py-3"
+            ? "bg-gray-900/95 backdrop-blur-md shadow-md px-5 py-3 md:px-6"
+            : "bg-gray-900/90 backdrop-blur-sm px-5 py-3 md:px-6"
         }`}
       >
         {/* Logo */}
