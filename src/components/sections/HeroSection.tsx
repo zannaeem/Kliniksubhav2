@@ -16,15 +16,21 @@ export default function HeroSection() {
     <section className="w-full relative z-0">
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
         <div className="relative w-full h-[93svh] md:h-[95vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
-          {/* Native Video Background */}
-          <video
-            ref={videoRef}
-            src="/media/Revision_Klinik_Subha_Compressed.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          {/* Native Video Background (Forced RAW HTML for iOS Safari Autoplay bypass) */}
+          <div
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            dangerouslySetInnerHTML={{
+              __html: `
+                <video
+                  src="/media/Revision_Klinik_Subha_Compressed.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                ></video>
+              `
+            }}
           />
 
           {/* Dark overlay */}
