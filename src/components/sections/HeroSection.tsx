@@ -22,7 +22,7 @@ export default function HeroSection() {
             dangerouslySetInnerHTML={{
               __html: `
                 <video
-                  src="/media/Revision_Klinik_Subha_Compressed.mp4"
+                  src="/media/compressed.mp4"
                   autoplay
                   loop
                   muted
