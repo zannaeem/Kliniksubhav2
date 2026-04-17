@@ -13,7 +13,7 @@ export default function MobileTabBar() {
   return (
     <>
       {/* Bottom Tab Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)]">
+      <div className="md:hidden fixed transform-gpu bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-[100] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)]">
         <div className="flex items-center justify-around h-[68px]">
 
           {/* Appointment */}
@@ -75,14 +75,14 @@ export default function MobileTabBar() {
       {/* Bottom Sheet Backdrop */}
       {activeSheet && (
         <div
-          className="md:hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm"
+          className="md:hidden fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm"
           onClick={close}
         />
       )}
 
       {/* Call Bottom Sheet */}
       <div
-        className={`md:hidden fixed left-0 right-0 z-50 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
+        className={`md:hidden fixed left-0 right-0 z-[110] bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
           activeSheet === "call" ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ bottom: 0 }}
@@ -140,7 +140,7 @@ export default function MobileTabBar() {
 
       {/* WhatsApp Bottom Sheet */}
       <div
-        className={`md:hidden fixed left-0 right-0 z-50 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
+        className={`md:hidden fixed left-0 right-0 z-[110] bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
           activeSheet === "whatsapp" ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ bottom: 0 }}
@@ -206,7 +206,7 @@ export default function MobileTabBar() {
 
       {/* Map Bottom Sheet */}
       <div
-        className={`md:hidden fixed left-0 right-0 z-50 bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
+        className={`md:hidden fixed left-0 right-0 z-[110] bg-white rounded-t-3xl shadow-2xl transition-transform duration-300 ease-out ${
           activeSheet === "map" ? "translate-y-0" : "translate-y-full"
         }`}
         style={{ bottom: 0 }}
