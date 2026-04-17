@@ -18,7 +18,6 @@ type LogoEntry = {
 }
 
 const logoFiles: LogoEntry[] = [
-  { src: '/media/partner-logo/2.png' },
   { src: '/media/partner-logo/MDB.jpeg' },
   { src: '/media/partner-logo/4.png' },
   { src: '/media/partner-logo/6.png' },
