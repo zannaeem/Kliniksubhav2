@@ -94,12 +94,12 @@ export default function Footer() {
             <div className="text-sm text-muted space-y-4">
               <div>
                 <p className="font-medium text-foreground mb-1">Beaufort</p>
-                <p className="text-lg font-bold text-foreground">8:00 AM – 9:00 PM</p>
+                <p className="text-base font-bold text-foreground">8:00 AM – 9:00 PM</p>
                 <p>Open daily, including public holidays</p>
               </div>
               <div>
                 <p className="font-medium text-foreground mb-1">Membakut</p>
-                <p className="text-lg font-bold text-foreground">8:00 AM – 8:00 PM</p>
+                <p className="text-base font-bold text-foreground">8:00 AM – 8:00 PM</p>
                 <p>Mon to Sat (Closed Sunday)</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
-          <span>&copy; {new Date().getFullYear()} Klinik Subha | Jash Pillay Medresources Sdn Bhd</span>
+          <span>&copy; {new Date().getFullYear()} Klinik Subha | Jash Pillay Medresources Sdn Bhd (1291629-X)</span>
           <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-1">
             {legalLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-foreground transition-colors">
