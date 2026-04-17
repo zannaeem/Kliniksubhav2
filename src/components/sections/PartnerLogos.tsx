@@ -36,7 +36,7 @@ export default function PartnerLogos() {
         </div>
 
         {/* Infinite logo slider */}
-        <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[110px] md:h-[140px]">
+        <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[140px] md:h-[140px]">
           <div className="marquee-track h-full items-center">
             {/* Three copies so -33.333% always lands cleanly */}
             {[...logoFiles, ...logoFiles, ...logoFiles].map((n, i) => (
@@ -45,7 +45,7 @@ export default function PartnerLogos() {
                 <img
                   src={`/media/partner-logo/${n}.png`}
                   alt={`partner-${n}`}
-                  className="h-[90px] md:h-[110px] w-auto block object-contain"
+                  className="h-[120px] md:h-[110px] w-auto block object-contain"
                 />
               </div>
             ))}
