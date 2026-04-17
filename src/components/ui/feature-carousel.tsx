@@ -37,11 +37,11 @@ const FEATURES = [
   },
   {
     id: "screening-full-deluxe-lelaki",
-    label: "Full Deluxe (Lelaki)",
+    label: "Full Deluxe (Lelaki) — RM315",
     icon: HeartCheckIcon,
     image: "/images/services/service4.jpeg",
     description:
-      "Comprehensive screening for men aged 40 and above. Covers cancer markers and cardiac risk.",
+      "Comprehensive screening for men aged 40+. Cancer markers, cardiac risk, Hepatitis A, H.Pylori & free physio session.",
   },
   {
     id: "screening-standard",
@@ -50,6 +50,14 @@ const FEATURES = [
     image: "/images/services/service5.jpeg",
     description:
       "Our most popular package. Full blood panel, liver, kidney, thyroid, and more.",
+  },
+  {
+    id: "screening-standard-addon",
+    label: "Saringan Kesihatan — Add On",
+    icon: MedicalFileIcon,
+    image: "/images/services/service-addon.jpeg",
+    description:
+      "Optional add-on tests for any screening package. Vitamin D, Pap Smear, cancer markers, and more — individually priced.",
   },
   {
     id: "screening-pekerjaan-asas",
@@ -61,11 +69,11 @@ const FEATURES = [
   },
   {
     id: "screening-full-deluxe-wanita",
-    label: "Full Deluxe (Wanita)",
+    label: "Full Deluxe (Wanita) — RM360",
     icon: HealthIcon,
     image: "/images/services/service7.jpeg",
     description:
-      "Comprehensive screening for women aged 40 and above. Includes female-specific cancer markers.",
+      "Comprehensive screening for women aged 40+. Includes Pap Smear, ovarian & breast cancer markers, and free physio session.",
   },
   {
     id: "screening-gdl-psv-renew",
@@ -90,6 +98,22 @@ const FEATURES = [
     image: "/images/services/service10.jpeg",
     description:
       "Full pre-employment medical. Includes X-Ray, ECG, drug test, and blood work.",
+  },
+  {
+    id: "screening-warga-emas-lelaki",
+    label: "Saringan Warga Emas (Lelaki) — RM335",
+    icon: HeartCheckIcon,
+    image: "/images/services/service-warga-emas-lelaki.jpeg",
+    description:
+      "Special package for men aged 55+. Joint, thyroid, vitamin & mineral screening, cancer markers, free flu vaccine & physio.",
+  },
+  {
+    id: "screening-warga-emas-wanita",
+    label: "Saringan Warga Emas (Wanita) — RM335",
+    icon: HealthIcon,
+    image: "/images/services/service-warga-emas-wanita.jpeg",
+    description:
+      "Special package for women aged 65+. Joint, thyroid, vitamin & mineral screening, female cancer markers, free flu vaccine & physio.",
   },
   {
     id: "vaksin-gardasil",
