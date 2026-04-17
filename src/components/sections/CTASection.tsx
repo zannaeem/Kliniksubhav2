@@ -18,11 +18,11 @@ export default function CTASection() {
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight max-w-2xl mx-auto leading-[1.1]">
-            We&apos;re open every day.
+            We support walk-ins.
             <span className="block text-[#46c8a1]">Just walk in.</span>
           </h2>
           <p className="mt-5 text-white/60 text-base leading-relaxed max-w-xl mx-auto">
-            Visit us at Beaufort or Membakut - open from 8AM to 9PM, every day of the year. Book ahead via WhatsApp or simply come in.
+            Visit us at Beaufort or Membakut. Both branches maintain comprehensive hours and are open on public holidays. Book ahead via WhatsApp or simply come in.
           </p>
 
           {/* Dual-branch WhatsApp buttons */}

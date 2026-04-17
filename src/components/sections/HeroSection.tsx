@@ -25,7 +25,7 @@ export default function HeroSection() {
                 Komitmen Kami
               </h1>
               <p className="text-lg md:text-xl text-white/75 max-w-lg font-medium">
-                Open Daily 8AM – 9PM, Including Public Holidays
+                Beaufort: Daily 8am-9pm | Membakut: Mon-Sat 8am-8pm
               </p>
               <a
                 href="https://wa.me/60162235212"

@@ -2,7 +2,7 @@ const stats = [
   { value: "35+", label: "Years Serving Beaufort" },
   { value: "3", label: "Specialist Doctors" },
   { value: "15+", label: "Panel Insurance Partners" },
-  { value: "8AM–9PM", label: "Every Day, No Exceptions" },
+  { value: "Daily", label: "Open Every Public Holiday" },
 ];
 
 export default function StatsBar() {

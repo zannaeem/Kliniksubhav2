@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Are you open on public holidays?",
-    a: "Yes! We are open every day including weekends and all public holidays, from 8:00 AM to 9:00 PM.",
+    a: "Our Beaufort branch is open every day from 8:00 AM to 9:00 PM. Our Membakut branch is open Monday to Saturday from 8:00 AM to 8:00 PM. Both branches operate on public holidays.",
   },
   {
     q: "What services do you offer?",

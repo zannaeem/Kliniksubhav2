@@ -19,13 +19,13 @@ export default function AboutClinic() {
               Founded by Dr. Subhagan Chandran, Klinik Subha started as a single GP clinic in Beaufort in 1990. Over 35 years later, we have grown to serve more communities across Sabah, with branches in <strong>Beaufort</strong> and <strong>Membakut</strong> - bringing the same standard of care closer to where people live.
             </p>
             <p className="text-gray-700 text-[17px] md:text-[18px] leading-[1.8] mb-8">
-              Each clinic is open daily from <strong>8:00 AM to 9:00 PM</strong> including public holidays, so you always have somewhere to go when it matters most.
+              Both clinics operate with comprehensive hours including public holidays, so you always have somewhere to go when it matters most.
             </p>
 
             <ul className="space-y-3 mb-10">
               {[
                 "Beaufort's oldest GP clinic, founded in 1990",
-                "Open daily 8AM to 9PM, every day of the year",
+                "Comprehensive hours up to 9PM, including public holidays",
                 "Panel clinic for major insurers and corporates",
                 "Digital X-Ray, Ultrasound, ECG and full lab on-site",
               ].map((item) => (

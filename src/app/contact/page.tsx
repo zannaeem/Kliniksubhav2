@@ -20,7 +20,7 @@ export default function ContactPage() {
       <VideoHero
         label="Contact Us"
         title="Find Us"
-        subtitle="Two locations serving Beaufort and Membakut. We're open every day - walk in or reach out anytime."
+        subtitle="Two locations serving Beaufort and Membakut. Walk in or reach out anytime."
       />
 
       {/* Quick contact strip */}
@@ -46,7 +46,7 @@ export default function ContactPage() {
               </div>
               <span className="flex items-center gap-2 text-white/90 text-sm">
                 <Clock className="w-4 h-4" />
-                Open daily 8:00 AM – 9:00 PM
+                Beaufort: Daily 8am-9pm | Membakut: Mon-Sat 8am-8pm
               </span>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0">
@@ -190,9 +190,12 @@ export default function ContactPage() {
                     <a href="tel:016-2985212" className="hover:text-gray-700 transition-colors">016-298 5212</a>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mb-6">
-                  <Clock className="w-4 h-4 text-gray-400 shrink-0" />
-                  <p className="text-sm text-gray-500">Open daily · 8:00 AM – 9:00 PM</p>
+                <div className="flex items-start gap-3 mb-6">
+                  <Clock className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
+                  <div className="text-sm text-gray-500">
+                    <p>Mon to Sat · 8:00 AM – 8:00 PM</p>
+                    <p className="text-red-500 text-xs mt-0.5 font-medium">Closed on Sunday</p>
+                  </div>
                 </div>
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=KLINIK+SUBHA+MEMBAKUT+LOT+5+TINGKAT+BAWAH+BLOCK+A+KEDAI+MEMBAKUT+JAYA+BARU+89727+Membakut+Sabah"

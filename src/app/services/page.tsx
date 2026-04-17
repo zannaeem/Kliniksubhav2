@@ -85,9 +85,8 @@ export default function ServicesPage() {
       <section className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need a Consultation?</h2>
-          <p className="text-white/70 mb-8">
-            Book your appointment today via WhatsApp. We&apos;re open every day, 8AM to
-            9PM.
+          <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            Book your appointment today via WhatsApp. Our Beaufort branch is open daily (8am-9pm), and our Membakut branch operates Monday to Saturday (8am-8pm).
           </p>
           <a
             href="https://wa.me/60162235212"

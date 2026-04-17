@@ -62,9 +62,9 @@ const features = [
   },
   {
     icon: Clock,
-    title: "Open Every Day",
+    title: "Convenient Hours",
     description:
-      "8AM–9PM daily, including public holidays. Because your health doesn't wait.",
+      "Comprehensive hours extending up to 9PM, including public holidays. Because your health doesn't wait.",
     accent: false,
     index: 6,
     wide: true,

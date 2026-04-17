@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | Klinik Subha",
   },
   description:
-    "Klinik Subha offers affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Open daily 8AM–9PM including public holidays. Walk-ins welcome.",
+    "Klinik Subha offers affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Extended hours including public holidays. Walk-ins welcome.",
   keywords: [
     "klinik beaufort",
     "klinik membakut",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Klinik Subha - Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
     description:
-      "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Open daily 8AM–9PM including public holidays. Walk-ins welcome.",
+      "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Extended hours including public holidays. Walk-ins welcome.",
     type: "website",
     locale: "en_MY",
     siteName: "Klinik Subha",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Klinik Subha - Your Trusted Family Clinic in Beaufort & Membakut, Sabah",
     description:
-      "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Open daily 8AM–9PM.",
+      "Affordable, compassionate primary healthcare in Beaufort and Membakut, Sabah. Extended hours up to 9PM.",
     images: ["/og-image.jpg"],
   },
   metadataBase: new URL("https://www.kliniksubha.com"),

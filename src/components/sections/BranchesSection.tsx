@@ -25,7 +25,7 @@ const branches = [
     address: "Lot 5, Tingkat Bawah, Block A, Kedai Membakut Jaya Baru, 89727 Membakut, Sabah",
     phone: "+60 16-223 5212",
     whatsapp: "60162235212",
-    hours: "8:00 AM – 9:00 PM, Daily",
+    hours: "8:00 AM – 8:00 PM, Mon-Sat (Closed Sun)",
     mapsUrl: "https://www.google.com/maps/search/Klinik+Subha+Membakut+Lot+5+Block+A+Kedai+Membakut+Jaya+Baru+89727+Membakut+Sabah",
   },
 ];
@@ -43,7 +43,7 @@ export default function BranchesSection() {
             Find us in Sabah
           </h2>
           <p className="mt-3 text-muted text-base max-w-lg mx-auto">
-            Two branches, one community. Open every day so care is always within reach.
+            Two branches, one standard of care. Walk in or reach out to us anytime.
           </p>
         </div>
 

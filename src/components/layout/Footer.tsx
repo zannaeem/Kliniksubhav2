@@ -91,12 +91,17 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground text-sm uppercase tracking-wider mb-4">
               Hours
             </h3>
-            <div className="text-sm text-muted space-y-1.5">
-              <p className="font-medium text-foreground">Open Every Day</p>
-              <p className="text-xl font-bold text-foreground">
-                8:00 AM – 9:00 PM
-              </p>
-              <p>Including weekends & public holidays</p>
+            <div className="text-sm text-muted space-y-4">
+              <div>
+                <p className="font-medium text-foreground mb-1">Beaufort</p>
+                <p className="text-lg font-bold text-foreground">8:00 AM – 9:00 PM</p>
+                <p>Open daily, including public holidays</p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-1">Membakut</p>
+                <p className="text-lg font-bold text-foreground">8:00 AM – 8:00 PM</p>
+                <p>Mon to Sat (Closed Sunday)</p>
+              </div>
             </div>
             {/* Social */}
             <div className="flex gap-3 mt-6">

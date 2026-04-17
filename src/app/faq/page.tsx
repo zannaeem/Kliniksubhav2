@@ -11,7 +11,7 @@ const faqs = [
     items: [
       {
         q: "Do I need to make an appointment?",
-        a: "No appointment is needed - we accept walk-ins at both branches every day. However, if you prefer to plan ahead or want to book with a specific doctor, you can contact us via WhatsApp.",
+        a: "No appointment is needed - we accept walk-ins at both branches during operating hours. However, if you prefer to plan ahead or want to book with a specific doctor, you can contact us via WhatsApp.",
       },
       {
         q: "How do I book an appointment?",
@@ -53,11 +53,11 @@ const faqs = [
     items: [
       {
         q: "What are your opening hours?",
-        a: "We are open every day - Monday to Sunday, including public holidays - from 8:00 AM to 9:00 PM.",
+        a: "Our Beaufort branch is open every day from 8:00 AM to 9:00 PM. Our Membakut branch is open Monday to Saturday from 8:00 AM to 8:00 PM, and closed on Sundays.",
       },
       {
         q: "Are you open on public holidays?",
-        a: "Yes, Klinik Subha is open on all public holidays during regular hours (8:00 AM – 9:00 PM).",
+        a: "Yes, both Klinik Subha branches are open on public holidays following their respective regular operating hours.",
       },
       {
         q: "Where is the Beaufort branch?",
