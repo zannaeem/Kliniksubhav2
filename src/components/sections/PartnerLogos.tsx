@@ -13,6 +13,8 @@ type LogoEntry = {
   large?: boolean
   /** jump to extra large display size */
   xlarge?: boolean
+  /** jump to extra extra large display size */
+  xxlarge?: boolean
   /** crop to a square with heavy rounded edges */
   cropRounded?: boolean
 }
@@ -25,7 +27,7 @@ const logoFiles: LogoEntry[] = [
   { src: '/media/partner-logo/8.png' },
   { src: '/media/partner-logo/9.png' },
   { src: '/media/partner-logo/10.png' },
-  { src: '/media/partner-logo/khazanahhealthcare.jpeg', xlarge: true },
+  { src: '/media/partner-logo/khazanahhealthcare.jpeg', xxlarge: true },
   { src: '/media/partner-logo/12.png' },
   { src: '/media/partner-logo/13.png' },
   { src: '/media/partner-logo/14.png' },
@@ -77,6 +79,7 @@ export default function PartnerLogos() {
               let heightCls = 'h-[110px] md:h-[100px]'
               if (isLarge) heightCls = 'h-[150px] md:h-[130px]'
               if (logo.xlarge) heightCls = 'h-[180px] md:h-[160px]'
+              if (logo.xxlarge) heightCls = 'h-[210px] md:h-[190px]'
 
               if (logo.landscape) {
                 // Landscape crop: fixed width×height box, object-cover, rounded rect

@@ -36,8 +36,8 @@ const milestones = [
     title: "Growing With You",
     body: "Today, the Klinik Subha group spans three facilities: our flagship clinic in Beaufort, Kinabalu Medic Spine and Rehabilitation Centre, and our newly opened Membakut branch. The opening of the Membakut branch represents a major milestone in our commitment to bring quality, accessible healthcare to more communities in Sabah.",
     aside: "Three locations · Beaufort, Membakut & Beyond",
-    image: "/images/about/activity-present.jpg",
-    imageAlt: "Recent moments at Klinik Subha",
+    image: "/media/recent-activity/IMG_9365.JPG",
+    imageAlt: "Klinik Subha Membakut Branch Opening",
   },
 ];
 

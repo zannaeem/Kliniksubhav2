@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-[72px] bg-white z-40">
+        <div className="md:hidden fixed inset-0 top-[72px] bg-white z-[99]" style={{ backgroundColor: '#ffffff' }}>
           <div className="px-6 py-8 space-y-1">
             {navLinks.map((link) => (
               <Link
