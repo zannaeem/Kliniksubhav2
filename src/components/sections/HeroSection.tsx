@@ -1,10 +1,24 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(e => console.log("Autoplay prevented by browser:", e));
+    }
+  }, []);
   return (
     <section className="w-full relative z-0">
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
         <div className="relative w-full h-[93svh] md:h-[95vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
           {/* Native Video Background */}
           <video
+            ref={videoRef}
             src="/media/Revision_Klinik_Subha_Compressed.mp4"
             autoPlay
             loop
