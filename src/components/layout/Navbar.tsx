@@ -84,7 +84,7 @@ export default function Navbar() {
           {desktopDropdownOpen && (
             <div className="absolute top-full right-0 mt-3 bg-white rounded-2xl shadow-xl border border-gray-100 p-2 min-w-[180px] flex flex-col gap-1 z-50">
               <a
-                href="https://wa.me/60162235212"
+                href="https://wa.me/60162235212?text=Hi%20Klinik%20Subha%20Beaufort!"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setDesktopDropdownOpen(false)}
@@ -94,7 +94,7 @@ export default function Navbar() {
                 <svg className="text-gray-300 group-hover:text-[#46c8a1] transition-colors -mr-1" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
               </a>
               <a
-                href="https://wa.me/60162985212"
+                href="https://wa.me/60162985212?text=Hi%20Klinik%20Subha%20Membakut!"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setDesktopDropdownOpen(false)}
@@ -135,7 +135,7 @@ export default function Navbar() {
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-4">Book Appointment</p>
               <div className="grid grid-cols-2 gap-3 px-4">
                 <a
-                  href="https://wa.me/60162235212"
+                  href="https://wa.me/60162235212?text=Hi%20Klinik%20Subha%20Beaufort!"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
@@ -144,7 +144,7 @@ export default function Navbar() {
                   Beaufort
                 </a>
                 <a
-                  href="https://wa.me/60162985212"
+                  href="https://wa.me/60162985212?text=Hi%20Klinik%20Subha%20Membakut!"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}

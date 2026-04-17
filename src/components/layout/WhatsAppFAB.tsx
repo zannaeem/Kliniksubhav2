@@ -38,7 +38,7 @@ export default function WhatsAppFAB() {
         </div>
         <div className="space-y-2">
           <a
-            href="https://wa.me/60162235212"
+            href="https://wa.me/60162235212?text=Hi%20Klinik%20Subha%20Beaufort!"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
@@ -53,7 +53,7 @@ export default function WhatsAppFAB() {
             </div>
           </a>
           <a
-            href="https://wa.me/60162985212"
+            href="https://wa.me/60162985212?text=Hi%20Klinik%20Subha%20Membakut!"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
