@@ -18,7 +18,9 @@ export default function MobileTabBar() {
 
           {/* Appointment */}
           <a
-            href="/contact"
+            href="https://kliniksubha.yezza.co/appointment"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-col items-center justify-center flex-1 h-full text-gray-500 hover:text-[#46c8a1] transition-colors relative"
           >
             <Calendar className="w-[24px] h-[24px] mb-1 text-[#46c8a1]" />
