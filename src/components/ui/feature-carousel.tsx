@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React from "react";
 import {
   StethoscopeIcon,
   HeartCheckIcon,
@@ -173,128 +173,75 @@ const FEATURES = [
   },
 ];
 
-const AUTO_PLAY_INTERVAL = 3000;
+// Tripled so the -33.333% loop lands cleanly
+const TRACK = [...FEATURES, ...FEATURES, ...FEATURES];
 
 export function FeatureCarousel() {
-  const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const goTo = useCallback((i: number) => {
-    setIndex((i + FEATURES.length) % FEATURES.length);
-  }, []);
-
-  const advance = useCallback(() => {
-    setIndex((prev) => (prev + 1) % FEATURES.length);
-  }, []);
-
-  // Auto-play
-  useEffect(() => {
-    if (isPaused) return;
-    timerRef.current = setInterval(advance, AUTO_PLAY_INTERVAL);
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [advance, isPaused]);
-
-  const current = FEATURES[index];
-  const next = FEATURES[(index + 1) % FEATURES.length];
-
   return (
-    <div
-      className="w-full"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setIsPaused(false)}
-    >
-      {/* Single card — full width, elegant cross-fade */}
-      <div className="relative w-full rounded-3xl overflow-hidden" style={{ height: '520px' }}>
-        {/* Prerender all slides, only current is visible */}
-        {FEATURES.map((feature, i) => (
-          <div
-            key={feature.id}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{ opacity: i === index ? 1 : 0, zIndex: i === index ? 1 : 0 }}
-          >
-            <img
-              src={feature.image}
-              alt={feature.label}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+    <div className="w-full">
+      <style>{`
+        @keyframes carousel-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .carousel-track {
+          display: flex;
+          width: max-content;
+          animation: carousel-scroll 60s linear infinite;
+          will-change: transform;
+        }
+        .carousel-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
-            {/* Text overlay */}
-            <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-              <span className="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white/80 text-[10px] font-bold uppercase tracking-widest mb-3">
-                {String(i + 1).padStart(2, "0")} · Klinik Subha
-              </span>
-              <h3 className="text-white font-bold text-xl md:text-2xl leading-tight mb-2 tracking-tight">
-                {feature.label}
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
-                {feature.description}
-              </p>
+      {/* Overflow mask */}
+      <div className="relative w-full overflow-hidden">
+        <div className="carousel-track" style={{ gap: "16px" }}>
+          {TRACK.map((feature, i) => (
+            <div
+              key={`${feature.id}-${i}`}
+              /* Mobile: ~85vw card | Desktop: ~420px card showing 2 at once */
+              className="flex-shrink-0 w-[78vw] md:w-[420px] rounded-3xl overflow-hidden relative"
+              style={{ height: "420px" }}
+            >
+              {/* Background image */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={feature.image}
+                alt={feature.label}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+
+              {/* Counter badge */}
+              <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-[10px] font-medium tabular-nums">
+                {String((i % FEATURES.length) + 1).padStart(2, "0")} /{" "}
+                {FEATURES.length}
+              </div>
+
+              {/* Text */}
+              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                <span className="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white/80 text-[10px] font-bold uppercase tracking-widest mb-3">
+                  Klinik Subha
+                </span>
+                <h3 className="text-white font-bold text-lg md:text-xl leading-tight mb-1.5 tracking-tight">
+                  {feature.label}
+                </h3>
+                <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
+                  {feature.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-
-        {/* Prev / Next tap zones — half of card each side, invisible */}
-        <button
-          onClick={() => goTo(index - 1)}
-          aria-label="Previous"
-          className="absolute left-0 top-0 h-full w-1/2 z-10 cursor-pointer"
-        />
-        <button
-          onClick={() => goTo(index + 1)}
-          aria-label="Next"
-          className="absolute right-0 top-0 h-full w-1/2 z-10 cursor-pointer"
-        />
-
-        {/* Progress counter top-right */}
-        <div className="absolute top-5 right-5 z-20 px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-medium tabular-nums">
-          {index + 1} / {FEATURES.length}
-        </div>
-      </div>
-
-      {/* Controls row: arrows + dots all in one centered line */}
-      <div className="flex items-center justify-center gap-3 mt-4">
-        {/* Prev arrow */}
-        <button
-          onClick={() => goTo(index - 1)}
-          aria-label="Previous"
-          className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors shrink-0"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-600">
-            <path d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-        </button>
-
-        {/* Dot indicators */}
-        <div className="flex items-center gap-1.5">
-          {FEATURES.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`rounded-full transition-all duration-300 ${
-                i === index
-                  ? "w-6 h-1.5 bg-[#46c8a1]"
-                  : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-            />
           ))}
         </div>
 
-        {/* Next arrow */}
-        <button
-          onClick={() => goTo(index + 1)}
-          aria-label="Next"
-          className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors shrink-0"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-600">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </button>
+        {/* Edge fade — left */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 md:w-20 bg-gradient-to-r from-[#46c8a1] to-transparent" />
+        {/* Edge fade — right */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 md:w-20 bg-gradient-to-l from-[#46c8a1] to-transparent" />
       </div>
     </div>
   );
