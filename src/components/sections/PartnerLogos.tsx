@@ -3,9 +3,29 @@
 import { Sparkles } from "@/components/ui/sparkles"
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 
-const logoFiles = [2,3,4,6,7,8,9,10,11,12,13,14,15]
-// Secret Recipe (6) gets a larger display size
-const largeLogos = new Set([6])
+type LogoEntry = { src: string; rounded?: boolean }
+
+const logoFiles: LogoEntry[] = [
+  { src: '/media/partner-logo/2.png' },
+  { src: '/media/partner-logo/MDB.jpeg' },
+  { src: '/media/partner-logo/4.png' },
+  { src: '/media/partner-logo/6.png' },
+  { src: '/media/partner-logo/7.png' },
+  { src: '/media/partner-logo/8.png' },
+  { src: '/media/partner-logo/9.png' },
+  { src: '/media/partner-logo/10.png' },
+  { src: '/media/partner-logo/khazanahhealthcare.jpeg' },
+  { src: '/media/partner-logo/12.png' },
+  { src: '/media/partner-logo/13.png' },
+  { src: '/media/partner-logo/14.png' },
+  { src: '/media/partner-logo/15.png' },
+  { src: '/media/partner-logo/lojiairgadong.jpeg', rounded: true },
+  { src: '/media/partner-logo/sdsfreshmart.jpeg' },
+  { src: '/media/partner-logo/winwin.jpeg', rounded: true },
+]
+
+// Logos that get a larger display size
+const largeSrcs = new Set(['/media/partner-logo/6.png', '/media/partner-logo/15.png'])
 
 export default function PartnerLogos() {
   return (
@@ -41,13 +61,13 @@ export default function PartnerLogos() {
         <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[140px] md:h-[140px]">
           <div className="marquee-track h-full items-center">
             {/* Three copies so -33.333% always lands cleanly */}
-            {[...logoFiles, ...logoFiles, ...logoFiles].map((n, i) => (
+            {[...logoFiles, ...logoFiles, ...logoFiles].map((logo, i) => (
               <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`/media/partner-logo/${n}.png`}
-                  alt={`partner-${n}`}
-                  className={`w-auto block object-contain ${largeLogos.has(n) ? 'h-[160px] md:h-[140px]' : 'h-[120px] md:h-[110px]'}`}
+                  src={logo.src}
+                  alt={`partner-${i}`}
+                  className={`w-auto block object-contain ${largeSrcs.has(logo.src) ? 'h-[160px] md:h-[140px]' : 'h-[120px] md:h-[110px]'} ${logo.rounded ? 'rounded-2xl overflow-hidden' : ''}`}
                 />
               </div>
             ))}
