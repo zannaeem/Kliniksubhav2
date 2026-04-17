@@ -64,7 +64,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased bg-white`}>
         <Navbar />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
         <WhatsAppFAB />
         <MobileTabBar />

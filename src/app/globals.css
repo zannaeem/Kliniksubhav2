@@ -12,6 +12,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* Force iOS Safari to respect position:fixed on child elements */
+    height: 100%;
   }
 
   body {
@@ -19,6 +21,9 @@
     background: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent overflow-causing transforms from breaking fixed children on iOS */
+    min-height: 100%;
+    position: relative;
   }
 }
 

@@ -4,10 +4,21 @@ export default function HeroSection() {
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
         <div className="relative w-full h-[93svh] md:h-[95vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
           {/* Video Background (YouTube) */}
+          {/* Note: using left/top % offsets instead of translate to avoid iOS fixed-pos bug */}
           <iframe
             src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
             allow="autoplay; encrypted-media"
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              width: '177.77vh',
+              minWidth: '100vw',
+              height: '100vh',
+              minHeight: '56.25vw',
+              marginTop: '-50vh',
+              marginLeft: '-88.88vh',
+            }}
           />
 
           {/* Dark overlay */}
