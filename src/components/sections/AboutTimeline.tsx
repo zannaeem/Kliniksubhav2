@@ -216,7 +216,7 @@ export default function AboutTimeline() {
             aria-hidden="true"
           />
 
-          {milestones.map((milestone, index) => (
+          {[...milestones].reverse().map((milestone, index) => (
             <TimelineNode key={milestone.year} milestone={milestone} index={index} />
           ))}
         </div>
