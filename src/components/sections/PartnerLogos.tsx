@@ -31,7 +31,7 @@ const logoFiles: LogoEntry[] = [
   { src: '/media/partner-logo/13.png' },
   { src: '/media/partner-logo/14.png' },
   { src: '/media/partner-logo/15.png' },
-  { src: '/media/partner-logo/lojiairgadong.jpeg', landscape: true },
+  { src: '/media/partner-logo/loji.png', rounded: true, xlarge: true },
   { src: '/media/partner-logo/sdsfreshmart.jpeg', xlarge: true },
   { src: '/media/partner-logo/winwin.jpeg', cropRounded: true },
 ]
