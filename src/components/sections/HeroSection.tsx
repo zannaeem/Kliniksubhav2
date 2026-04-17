@@ -3,22 +3,14 @@ export default function HeroSection() {
     <section className="w-full relative z-0">
       <div className="w-full mx-auto px-3 sm:px-4 pt-3">
         <div className="relative w-full h-[93svh] md:h-[95vh] min-h-[600px] rounded-[32px] overflow-hidden shadow-xl bg-gray-900">
-          {/* Video Background (YouTube) */}
-          {/* Note: using left/top % offsets instead of translate to avoid iOS fixed-pos bug */}
-          <iframe
-            src="https://www.youtube.com/embed/arcxcJ1C7yA?autoplay=1&mute=1&loop=1&playlist=arcxcJ1C7yA&controls=0&rel=0&modestbranding=1&playsinline=1"
-            allow="autoplay; encrypted-media"
-            className="absolute pointer-events-none"
-            style={{
-              top: '50%',
-              left: '50%',
-              width: '177.77vh',
-              minWidth: '100vw',
-              height: '100vh',
-              minHeight: '56.25vw',
-              marginTop: '-50vh',
-              marginLeft: '-88.88vh',
-            }}
+          {/* Native Video Background */}
+          <video
+            src="/media/Revision_Klinik_Subha_Compressed.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           />
 
           {/* Dark overlay */}
