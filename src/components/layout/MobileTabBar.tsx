@@ -150,7 +150,7 @@ export default function MobileTabBar() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-[#46c8a1] mb-1">Select Clinic</p>
-              <h3 className="text-xl font-bold text-gray-900">WhatsApp Us</h3>
+              <h3 className="text-xl font-bold text-gray-900">Chat With Us</h3>
             </div>
             <button
               onClick={close}

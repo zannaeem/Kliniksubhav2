@@ -28,7 +28,7 @@ export default function HeroSection() {
                 Beaufort: Daily 8am-9pm | Membakut: Mon-Sat 8am-8pm
               </p>
               <a
-                href="https://wa.me/60162235212"
+                href="https://kliniksubha.yezza.co/appointment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center justify-center bg-primary text-white px-9 py-4 rounded-full font-semibold text-base hover:bg-primaryDark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"

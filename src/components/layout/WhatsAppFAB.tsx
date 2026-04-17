@@ -34,7 +34,7 @@ export default function WhatsAppFAB() {
       >
         <div className="mb-3 px-1">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#46c8a1] mb-1">Select Clinic</p>
-          <h4 className="text-gray-900 font-bold">WhatsApp Us</h4>
+          <h4 className="text-gray-900 font-bold">Chat With Us</h4>
         </div>
         <div className="space-y-2">
           <a

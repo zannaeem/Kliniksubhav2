@@ -86,15 +86,15 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need a Consultation?</h2>
           <p className="text-white/70 mb-8 max-w-lg mx-auto">
-            Book your appointment today via WhatsApp. Our Beaufort branch is open daily (8am-9pm), and our Membakut branch operates Monday to Saturday (8am-8pm).
+            Book your appointment today online. Our Beaufort branch is open daily (8am-9pm), and our Membakut branch operates Monday to Saturday (8am-8pm).
           </p>
           <a
-            href="https://wa.me/60162235212"
+            href="https://kliniksubha.yezza.co/appointment"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-accent transition-colors"
           >
-            Book via WhatsApp
+            Book Appointment Online
             <svg
               width="16"
               height="16"
