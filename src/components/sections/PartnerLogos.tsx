@@ -83,12 +83,12 @@ export default function PartnerLogos() {
                 // Landscape crop: fixed width×height box, object-cover, rounded rect
                 return (
                   <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
-                    <div className="w-[200px] h-[100px] md:w-[240px] md:h-[120px] rounded-3xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-100">
+                    <div className="w-[180px] h-[90px] md:w-[210px] md:h-[105px] rounded-3xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-100 bg-white">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={logo.src}
                         alt={`partner-${i}`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                   </div>
