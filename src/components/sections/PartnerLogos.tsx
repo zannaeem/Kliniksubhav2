@@ -3,7 +3,9 @@
 import { Sparkles } from "@/components/ui/sparkles"
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 
-const logoFiles = [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+const logoFiles = [2,3,4,6,7,8,9,10,11,12,13,14,15]
+// Secret Recipe (6) gets a larger display size
+const largeLogos = new Set([6])
 
 export default function PartnerLogos() {
   return (
@@ -45,7 +47,7 @@ export default function PartnerLogos() {
                 <img
                   src={`/media/partner-logo/${n}.png`}
                   alt={`partner-${n}`}
-                  className="h-[120px] md:h-[110px] w-auto block object-contain"
+                  className={`w-auto block object-contain ${largeLogos.has(n) ? 'h-[160px] md:h-[140px]' : 'h-[120px] md:h-[110px]'}`}
                 />
               </div>
             ))}
