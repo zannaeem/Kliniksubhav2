@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-
 const milestones = [
   {
     year: "1990",
@@ -18,7 +17,7 @@ const milestones = [
     title: "A New Chapter",
     body: "Dr. Jason Jimmy Lee Pillay took over the practice under Jash Pillay Medresources Sdn Bhd. His approach was simple - honour what Dr. Subhagan built, and build further. Modern diagnostic tools were introduced, and the clinic's reputation for personal, unhurried care was kept intact.",
     aside: "Jash Pillay Medresources Sdn Bhd · est. 17 Aug 2018",
-    image: "/images/about/dr-jason.jpg",
+    image: "/media/doctors/Dr.Jason Pillay.png",
     imageAlt: "Dr. Jason Jimmy Lee Pillay",
   },
   {
@@ -26,13 +25,16 @@ const milestones = [
     title: "Strategic Expansion",
     body: "The clinic relocated to a dual-shoplot space at Beaufort Square - a purpose-designed facility equipped with ultrasound, X-ray, ECG, and a full blood count machine. For the first time, patients could complete a full diagnostic workup in a single visit, without travelling to the city.",
     aside: "Beaufort Square, 89800 Beaufort",
-    image: "/images/about/activity-2021.jpg",
+    images: [
+      "/media/facilities/RUID97594c5744244f249c15e7c6766f8aa6.jpg",
+      "/media/facilities/RUIDb65d2438a29147e49ac08dd02368a6d1.jpg",
+    ],
     imageAlt: "Klinik Subha Beaufort Square facility",
   },
   {
     year: "Present",
     title: "Growing With You",
-    body: "Today, the Klinik Subha group spans three facilities: our flagship clinic in Beaufort, the Kinabalu Medic Spine and Rehabilitation Centre, and the soon-to-open Membakut branch. Each one reflects the same founding belief - that good healthcare starts with actually listening.",
+    body: "Today, the Klinik Subha group spans three facilities: our flagship clinic in Beaufort, Kinabalu Medic Spine and Rehabilitation Centre, and our newly opened Membakut branch. The opening of the Membakut branch represents a major milestone in our commitment to bring quality, accessible healthcare to more communities in Sabah.",
     aside: "Three locations · Beaufort, Membakut & Beyond",
     image: "/images/about/activity-present.jpg",
     imageAlt: "Recent moments at Klinik Subha",
@@ -71,9 +73,19 @@ function TimelineNode({
             {milestone.year}
           </span>
           <TextBlock milestone={milestone} />
-          <div className="mt-4 relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
-            <Image src={milestone.image} alt={milestone.imageAlt} fill className="object-cover" />
-          </div>
+          {"images" in milestone && milestone.images ? (
+            <div className="mt-4 grid grid-cols-2 gap-2 w-full">
+              {milestone.images.map((img, i) => (
+                <div key={i} className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
+                  <Image src={img} alt={milestone.imageAlt} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-4 relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
+              <Image src={milestone.image as string} alt={milestone.imageAlt} fill className="object-cover" />
+            </div>
+          )}
         </div>
       </motion.div>
 
@@ -164,13 +176,25 @@ function TextBlock({ milestone }: { milestone: (typeof milestones)[number] }) {
 }
 
 function PhotoBlock({ milestone }: { milestone: (typeof milestones)[number] }) {
+  if ("images" in milestone && milestone.images) {
+    return (
+      <div className="grid grid-cols-2 gap-2 w-full">
+        {milestone.images.map((img, i) => (
+          <div key={i} className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
+            <Image src={img} alt={milestone.imageAlt} fill className="object-cover" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100">
       <Image
-        src={milestone.image}
+        src={milestone.image as string}
         alt={milestone.imageAlt}
         fill
-        className="object-cover"
+        className="object-cover object-top"
       />
     </div>
   );
