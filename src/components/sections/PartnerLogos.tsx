@@ -11,6 +11,10 @@ type LogoEntry = {
   landscape?: boolean
   /** bump up display size */
   large?: boolean
+  /** jump to extra large display size */
+  xlarge?: boolean
+  /** crop to a square with heavy rounded edges */
+  cropRounded?: boolean
 }
 
 const logoFiles: LogoEntry[] = [
@@ -22,14 +26,14 @@ const logoFiles: LogoEntry[] = [
   { src: '/media/partner-logo/8.png' },
   { src: '/media/partner-logo/9.png' },
   { src: '/media/partner-logo/10.png' },
-  { src: '/media/partner-logo/khazanahhealthcare.jpeg', large: true },
+  { src: '/media/partner-logo/khazanahhealthcare.jpeg', xlarge: true },
   { src: '/media/partner-logo/12.png' },
   { src: '/media/partner-logo/13.png' },
   { src: '/media/partner-logo/14.png' },
   { src: '/media/partner-logo/15.png' },
   { src: '/media/partner-logo/lojiairgadong.jpeg', landscape: true },
-  { src: '/media/partner-logo/sdsfreshmart.jpeg', large: true },
-  { src: '/media/partner-logo/winwin.jpeg', rounded: true, large: true },
+  { src: '/media/partner-logo/sdsfreshmart.jpeg', xlarge: true },
+  { src: '/media/partner-logo/winwin.jpeg', cropRounded: true },
 ]
 
 // Base large logos (Secret Recipe + HLB)
@@ -71,12 +75,29 @@ export default function PartnerLogos() {
             {/* Three copies so -33.333% always lands cleanly */}
             {[...logoFiles, ...logoFiles, ...logoFiles].map((logo, i) => {
               const isLarge = largeSrcs.has(logo.src) || logo.large
-              const heightCls = isLarge ? 'h-[150px] md:h-[130px]' : 'h-[110px] md:h-[100px]'
+              let heightCls = 'h-[110px] md:h-[100px]'
+              if (isLarge) heightCls = 'h-[150px] md:h-[130px]'
+              if (logo.xlarge) heightCls = 'h-[180px] md:h-[160px]'
+
               if (logo.landscape) {
                 // Landscape crop: fixed width×height box, object-cover, rounded rect
                 return (
                   <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
-                    <div className="w-[180px] h-[90px] md:w-[200px] md:h-[100px] rounded-xl overflow-hidden flex-shrink-0">
+                    <div className="w-[200px] h-[100px] md:w-[240px] md:h-[120px] rounded-3xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-100">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={logo.src}
+                        alt={`partner-${i}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                )
+              }
+              if (logo.cropRounded) {
+                return (
+                  <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
+                    <div className="w-[140px] h-[140px] md:w-[160px] md:h-[160px] rounded-3xl overflow-hidden flex-shrink-0 shadow-sm border border-gray-100">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={logo.src}
