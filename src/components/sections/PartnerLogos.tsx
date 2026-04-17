@@ -3,7 +3,15 @@
 import { Sparkles } from "@/components/ui/sparkles"
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 
-type LogoEntry = { src: string; rounded?: boolean }
+type LogoEntry = {
+  src: string
+  /** pill/square rounded corners */
+  rounded?: boolean
+  /** wider landscape crop box */
+  landscape?: boolean
+  /** bump up display size */
+  large?: boolean
+}
 
 const logoFiles: LogoEntry[] = [
   { src: '/media/partner-logo/2.png' },
@@ -14,17 +22,17 @@ const logoFiles: LogoEntry[] = [
   { src: '/media/partner-logo/8.png' },
   { src: '/media/partner-logo/9.png' },
   { src: '/media/partner-logo/10.png' },
-  { src: '/media/partner-logo/khazanahhealthcare.jpeg' },
+  { src: '/media/partner-logo/khazanahhealthcare.jpeg', large: true },
   { src: '/media/partner-logo/12.png' },
   { src: '/media/partner-logo/13.png' },
   { src: '/media/partner-logo/14.png' },
   { src: '/media/partner-logo/15.png' },
-  { src: '/media/partner-logo/lojiairgadong.jpeg', rounded: true },
-  { src: '/media/partner-logo/sdsfreshmart.jpeg' },
-  { src: '/media/partner-logo/winwin.jpeg', rounded: true },
+  { src: '/media/partner-logo/lojiairgadong.jpeg', landscape: true },
+  { src: '/media/partner-logo/sdsfreshmart.jpeg', large: true },
+  { src: '/media/partner-logo/winwin.jpeg', rounded: true, large: true },
 ]
 
-// Logos that get a larger display size
+// Base large logos (Secret Recipe + HLB)
 const largeSrcs = new Set(['/media/partner-logo/6.png', '/media/partner-logo/15.png'])
 
 export default function PartnerLogos() {
@@ -61,16 +69,35 @@ export default function PartnerLogos() {
         <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[140px] md:h-[140px]">
           <div className="marquee-track h-full items-center">
             {/* Three copies so -33.333% always lands cleanly */}
-            {[...logoFiles, ...logoFiles, ...logoFiles].map((logo, i) => (
-              <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={logo.src}
-                  alt={`partner-${i}`}
-                  className={`w-auto block object-contain ${largeSrcs.has(logo.src) ? 'h-[160px] md:h-[140px]' : 'h-[120px] md:h-[110px]'} ${logo.rounded ? 'rounded-2xl overflow-hidden' : ''}`}
-                />
-              </div>
-            ))}
+            {[...logoFiles, ...logoFiles, ...logoFiles].map((logo, i) => {
+              const isLarge = largeSrcs.has(logo.src) || logo.large
+              const heightCls = isLarge ? 'h-[150px] md:h-[130px]' : 'h-[110px] md:h-[100px]'
+              if (logo.landscape) {
+                // Landscape crop: fixed width×height box, object-cover, rounded rect
+                return (
+                  <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
+                    <div className="w-[180px] h-[90px] md:w-[200px] md:h-[100px] rounded-xl overflow-hidden flex-shrink-0">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={logo.src}
+                        alt={`partner-${i}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                )
+              }
+              return (
+                <div key={`logo-${i}`} className="flex items-center justify-center mx-6 md:mx-10">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logo.src}
+                    alt={`partner-${i}`}
+                    className={`w-auto block object-contain ${heightCls}${logo.rounded ? ' rounded-2xl overflow-hidden' : ''}`}
+                  />
+                </div>
+              )
+            })}
           </div>
           <ProgressiveBlur
             className='pointer-events-none absolute top-0 left-0 h-full w-[40px] sm:w-[100px] md:w-[200px]'
