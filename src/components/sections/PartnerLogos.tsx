@@ -71,7 +71,7 @@ export default function PartnerLogos() {
         </div>
 
         {/* Infinite logo slider */}
-        <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[140px] md:h-[140px]">
+        <div className="relative mt-8 md:mt-12 w-full overflow-hidden h-[240px] md:h-[240px]">
           <div className="marquee-track h-full items-center">
             {/* Three copies so -33.333% always lands cleanly */}
             {[...logoFiles, ...logoFiles, ...logoFiles].map((logo, i) => {
@@ -79,7 +79,7 @@ export default function PartnerLogos() {
               let heightCls = 'h-[110px] md:h-[100px]'
               if (isLarge) heightCls = 'h-[150px] md:h-[130px]'
               if (logo.xlarge) heightCls = 'h-[180px] md:h-[160px]'
-              if (logo.xxlarge) heightCls = 'h-[210px] md:h-[190px]'
+              if (logo.xxlarge) heightCls = 'h-[250px] md:h-[230px]'
 
               if (logo.landscape) {
                 // Landscape crop: fixed width×height box, object-cover, rounded rect
