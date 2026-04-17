@@ -87,8 +87,8 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">8. Contact</h2>
             <p>For any enquiries regarding these terms, please contact us:</p>
             <div className="mt-3 space-y-1">
-              <p><strong>Klinik Subha Beaufort</strong> - 016-2235212</p>
-              <p><strong>Klinik Subha Membakut</strong> - 087-887 788</p>
+              <p><strong>Klinik Subha Beaufort</strong> - 087-212 157 / 016-223 5212</p>
+              <p><strong>Klinik Subha Membakut</strong> - 087-887 788 / 016-298 5212</p>
             </div>
           </section>
 

@@ -68,12 +68,20 @@ export default function Footer() {
               <div>
                 <p className="font-medium text-foreground mb-1">Beaufort</p>
                 <p>Lot C-019 & C-020, Ground Floor,<br />Beaufort Square, 89800 Beaufort, Sabah</p>
-                <a href="tel:016-2235212" className="hover:text-foreground transition-colors mt-1 block">016-2235212</a>
+                <div className="mt-1">
+                  <a href="tel:087-212157" className="hover:text-foreground transition-colors">087-212 157</a>
+                  <span className="mx-1">/</span>
+                  <a href="tel:016-2235212" className="hover:text-foreground transition-colors">016-223 5212</a>
+                </div>
               </div>
               <div>
                 <p className="font-medium text-foreground mb-1">Membakut</p>
                 <p>Lot 5, Tingkat Bawah, Block A,<br />Kedai Membakut Jaya Baru, 89727 Membakut, Sabah</p>
-                <a href="tel:087-887788" className="hover:text-foreground transition-colors mt-1 block">087-887 788</a>
+                <div className="mt-1">
+                  <a href="tel:087-887788" className="hover:text-foreground transition-colors">087-887 788</a>
+                  <span className="mx-1">/</span>
+                  <a href="tel:016-2985212" className="hover:text-foreground transition-colors">016-298 5212</a>
+                </div>
               </div>
             </div>
           </div>

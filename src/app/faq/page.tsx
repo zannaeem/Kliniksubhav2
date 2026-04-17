@@ -15,7 +15,7 @@ const faqs = [
       },
       {
         q: "How do I book an appointment?",
-        a: "The easiest way is via WhatsApp at 016-2235212 (Beaufort) or 087-887 788 (Membakut). You can also use the booking buttons on our Doctors or Services pages.",
+        a: "The easiest way is via WhatsApp at 016-2235212 (Beaufort) or 016-298 5212 (Membakut). You can also use the booking buttons on our Doctors or Services pages.",
       },
       {
         q: "Do I need to bring anything for my first visit?",

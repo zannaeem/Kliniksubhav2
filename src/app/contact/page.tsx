@@ -28,34 +28,47 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6">
             <div className="flex flex-wrap items-center gap-6">
-              <a
-                href="tel:016-2235212"
-                className="flex items-center gap-2 text-white font-medium text-sm hover:text-white/80 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                016-2235212 <span className="text-white/70 font-normal">(Beaufort)</span>
-              </a>
-              <a
-                href="tel:087-887788"
-                className="flex items-center gap-2 text-white font-medium text-sm hover:text-white/80 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                087-887 788 <span className="text-white/70 font-normal">(Membakut)</span>
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href="tel:087-212157"
+                  className="flex items-center gap-2 text-white font-medium text-sm hover:text-white/80 transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  087-212 157 / 016-223 5212 <span className="text-white/70 font-normal">(Beaufort)</span>
+                </a>
+                <a
+                  href="tel:087-887788"
+                  className="flex items-center gap-2 text-white font-medium text-sm hover:text-white/80 transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  087-887 788 / 016-298 5212 <span className="text-white/70 font-normal">(Membakut)</span>
+                </a>
+              </div>
               <span className="flex items-center gap-2 text-white/90 text-sm">
                 <Clock className="w-4 h-4" />
                 Open daily 8:00 AM – 9:00 PM
               </span>
             </div>
-            <a
-              href="https://wa.me/60162235212"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white text-[#46c8a1] hover:bg-white/90 font-semibold px-5 py-2.5 rounded-full text-sm transition-colors shrink-0"
-            >
-              {WA_ICON}
-              Chat on WhatsApp
-            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-2 shrink-0">
+              <a
+                href="https://wa.me/60162235212"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white text-[#46c8a1] hover:bg-white/90 font-semibold px-4 py-2 rounded-full text-xs transition-colors w-full sm:w-auto justify-center"
+              >
+                {WA_ICON}
+                Beaufort
+              </a>
+              <a
+                href="https://wa.me/60162985212"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white text-[#46c8a1] hover:bg-white/90 font-semibold px-4 py-2 rounded-full text-xs transition-colors w-full sm:w-auto justify-center"
+              >
+                {WA_ICON}
+                Membakut
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -110,7 +123,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-3 mb-3">
                   <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                  <a href="tel:016-2235212" className="text-sm text-gray-500 hover:text-gray-700 transition-colors">016-2235212</a>
+                  <div className="text-sm text-gray-500">
+                    <a href="tel:087-212157" className="hover:text-gray-700 transition-colors">087-212 157</a>
+                    <span className="mx-1">/</span>
+                    <a href="tel:016-2235212" className="hover:text-gray-700 transition-colors">016-223 5212</a>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3 mb-6">
                   <Clock className="w-4 h-4 text-gray-400 shrink-0" />
@@ -167,7 +184,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-3 mb-3">
                   <Phone className="w-4 h-4 text-gray-400 shrink-0" />
-                  <a href="tel:087-887788" className="text-sm text-gray-500 hover:text-gray-700 transition-colors">087-887 788</a>
+                  <div className="text-sm text-gray-500">
+                    <a href="tel:087-887788" className="hover:text-gray-700 transition-colors">087-887 788</a>
+                    <span className="mx-1">/</span>
+                    <a href="tel:016-2985212" className="hover:text-gray-700 transition-colors">016-298 5212</a>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3 mb-6">
                   <Clock className="w-4 h-4 text-gray-400 shrink-0" />
@@ -244,15 +265,26 @@ export default function ContactPage() {
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-5">
                 Book an Appointment
               </p>
-              <a
-                href="https://wa.me/60162235212"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
-              >
-                {WA_ICON}
-                016-2235212
-              </a>
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-end gap-3">
+                <a
+                  href="https://wa.me/60162235212"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-5 py-2.5 rounded-full transition-colors text-sm w-full sm:w-auto"
+                >
+                  {WA_ICON}
+                  Beaufort
+                </a>
+                <a
+                  href="https://wa.me/60162985212"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-5 py-2.5 rounded-full transition-colors text-sm w-full sm:w-auto"
+                >
+                  {WA_ICON}
+                  Membakut
+                </a>
+              </div>
             </div>
 
           </div>

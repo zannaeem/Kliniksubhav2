@@ -70,8 +70,8 @@ export default function DisclaimerPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-3">Contact Us</h2>
             <p>If you have questions about this disclaimer, please contact us at either branch:</p>
             <div className="mt-3 space-y-1">
-              <p><strong>Klinik Subha Beaufort</strong> - 016-2235212</p>
-              <p><strong>Klinik Subha Membakut</strong> - 087-887 788</p>
+              <p><strong>Klinik Subha Beaufort</strong> - 087-212 157 / 016-223 5212</p>
+              <p><strong>Klinik Subha Membakut</strong> - 087-887 788 / 016-298 5212</p>
             </div>
           </section>
 
