@@ -181,7 +181,7 @@ import { useCallback } from "react";
 export function FeatureCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center", skipSnaps: false },
-    [Autoplay({ delay: 3500, stopOnInteraction: false })]
+    [Autoplay({ delay: 1500, stopOnInteraction: false })]
   );
 
   const scrollPrev = useCallback(() => {
